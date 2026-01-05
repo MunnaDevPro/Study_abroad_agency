@@ -36,6 +36,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -44,129 +49,94 @@
     <div data-include="components/navbar.html"></div>
 
 
+
+
+
     <!-- hero section -->
-    <section class="hero-section-wrapper relative bg-gradient-to-br from-white via-blue-50 to-purple-50 overflow-hidden min-h-[600px]">
-        <div class="max-w-7xl absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-10 mx-auto">
-            <svg class="bg-icon absolute w-40 h-40 top-[60%] right-[8%] animate-delay-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 2.18l7 3.82v8c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V8l7-3.82z"/></svg>
+    <style>
+        .dot-pattern {
+            background-image: radial-gradient(circle, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #fef2f2 0%, #edeef4 50%, #c7dbe8 100%);
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .hero-image-fade {
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+        }
+    </style>
 
-            <svg class="bg-icon absolute w-32 h-32 top-[10%] left-[5%] animate-delay-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+    <section class="relative min-h-screen overflow-hidden gradient-bg dot-pattern">
 
-        </div>
+        <div class="container max-w-7xl  mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2  items-center">
+                <!-- Left Content -->
+                <div class="space-y-6 lg:space-y-6">
 
-        <div class="max-w-7xl mx-auto px-5 py-16 relative z-10">
-            <div class="relative min-h-[500px]" id="heroCarouselMain">
 
-                <div class="hero-slide active">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <div class="text-center lg:text-left order-2 lg:order-1">
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight mb-5">
-                                Study Abroad with <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Confidence</span>
-                            </h1>
-                            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                                Get admitted to top universities worldwide. We help you achieve your dreams with expert guidance.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a href="#" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform">Apply Now</a>
-                                <a href="#" class="px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all">Explore Programs</a>
-                            </div>
-                        </div>
-                        <div class="relative order-1 lg:order-2">
-                            <div class="absolute inset-0 bg-blue-400 blur-[60px] opacity-20 rounded-3xl"></div>
-                            <img src="assets/images/hero1.png" class="relative rounded-3xl shadow-2xl w-full h-[300px] md:h-[450px] object-cover transition-transform duration-[1500ms]" alt="Students">
-                        </div>
+                    <!-- Main Heading -->
+                    <div class="space-y-1">
+                        <h1 class="text-3xl font-inter md:text-4xl lg:text-6xl xl:text-5xl font-bold text-gray-800 leading-tight">
+                            <span class="text-[var(--primary-color)]">Study Abroad</span> with Confidence Your Trusted Global<span class="text-[var(--accent-color)]">  Education</span> Partner
+
+
+                        </h1>
+                    </div>
+
+                    <!-- Description -->
+                    <p class=" text-gray-500 font-inter md:text-lg leading-tight max-w-md ">
+                        We help students secure admissions and student visas in top universitiesacross Australia, the UK, Canada, New Zeland & Europe with expert guidance and a transparent process
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 items-center pt-2 ">
+                        <!-- <button class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-7 py-3.5 rounded-full shadow-md transition-all duration-300 flex items-center gap-2 ">
+                        Start Free Trial
+                        <svg class="w-4 h-4 " fill="none " stroke="currentColor " viewBox="0 0 24 24 ">
+                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2.5 " d="M17 8l4 4m0 0l-4 4m4-4H3 "/>
+                        </svg>
+                    </button> -->
+
                     </div>
                 </div>
 
-                <div class="hero-slide ">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <div class="text-center lg:text-left order-2 lg:order-1">
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight mb-5">
-                                Your Global <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Career Starts</span> Here
-                            </h1>
-                            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                                Discover international internship opportunities and work-study programs in the UK, USA, and Canada.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a href="#" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform">Book Consultation</a>
-                                <a href="#" class="px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all">View Countries</a>
-                            </div>
-                        </div>
-                        <div class="relative order-1 lg:order-2">
-                            <div class="absolute inset-0 bg-blue-400 blur-[60px] opacity-20 rounded-3xl"></div>
-                            <img src="assets/images/hero2.png" class="relative rounded-3xl shadow-2xl w-full h-[300px] md:h-[450px] object-cover transition-transform duration-[1500ms]" alt="Global Career">
-                        </div>
+                <!-- Right Content - Image Section -->
+                <div class="relative h-[400px] lg:h-[450px] flex items-end justify-center mt-16">
+
+                    <!-- Person Image -->
+                    <div class="relative z-10 hero-image-fade lg:ml-20">
+                        <img src="/assets/images/hero1.png " alt="Support Professional " class="w-72 h-96 md:w-80 md:h-[450px] lg:w-90 lg:h-[520px] object-cover object-top shadow-sm " loading="lazy " />
                     </div>
+
                 </div>
-
-                <div class="hero-slide ">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <div class="text-center lg:text-left order-2 lg:order-1">
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight mb-5">
-                                Master Your <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">IELTS & PTE</span> Exams
-                            </h1>
-                            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                                Join our high-success rate coaching classes and clear your language proficiency tests with flying colors.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a href="#" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform">Join Class</a>
-                                <a href="#" class="px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all">Success Stories</a>
-                            </div>
-                        </div>
-                        <div class="relative order-1 lg:order-2">
-                            <div class="absolute inset-0 bg-blue-400 blur-[60px] opacity-20 rounded-3xl"></div>
-                            <img src="assets/images/hero3.png" class="relative rounded-3xl shadow-2xl w-full h-[300px] md:h-[450px] object-cover transition-transform duration-[1500ms]" alt="Exam Prep">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-slide ">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <div class="text-center lg:text-left order-2 lg:order-1">
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight mb-5">
-                                Simplified <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Visa Process</span>
-                            </h1>
-                            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                                From documentation to mock interviews, our visa specialists ensure your application is 100% compliant.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a href="#" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform">Check Eligibility</a>
-                                <a href="#" class="px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-all">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="relative order-1 lg:order-2">
-                            <div class="absolute inset-0 bg-blue-400 blur-[60px] opacity-20 rounded-3xl"></div>
-                            <img src="assets/images/hero4.png" class="relative rounded-3xl shadow-2xl w-full h-[300px] md:h-[450px] object-cover transition-transform duration-[1500ms]" alt="Visa Support">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="cursor-pointer absolute top-1/2 -translate-y-1/2 left-2 md:left-8 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-xl z-30 hover:scale-110 transition-transform text-blue-600" onclick="heroCarousel.prev()">
-                <svg class="w-6 h-6 fill-none stroke-current stroke-[3]" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
-            </button>
-            <button class="cursor-pointer absolute top-1/2 -translate-y-1/2 right-2 md:right-8 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-xl z-30 hover:scale-110 transition-transform text-blue-600" onclick="heroCarousel.next()">
-                <svg class="w-6 h-6 fill-none stroke-current stroke-[3]" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
-            </button>
-
-            <div class="flex justify-center gap-3 mt-10 relative z-30" id="carouselDots">
-                <button class="carousel-dot active w-3 h-3 bg-gray-300 rounded-full transition-all duration-500" onclick="heroCarousel.goTo(0)"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all duration-500" onclick="heroCarousel.goTo(1)"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all duration-500" onclick="heroCarousel.goTo(2)"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all duration-500" onclick="heroCarousel.goTo(3)"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all duration-500" onclick="heroCarousel.goTo(4)"></button>
             </div>
         </div>
     </section>
 
-
-
     <!-- Footer -->
-    <div data-include="components/footer.html"></div>
+    <div data-include="components/footer.html "></div>
 
 
     <!-- JavaScript -->
-    <script src="assets/js/include.js"></script>
-    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/include.js "></script>
+    <script src="assets/js/slider.js "></script>
 
 </body>
 

@@ -1,9 +1,8 @@
-<!-- Navbar Component -->
 <style>
      :root {
-        --primary-color: #2563eb;
-        --secondary-color: #8eb2f1;
-        --accent-color: #f59e0b;
+        --primary-color: #1E88E5;
+        --secondary-color: #42A5F5;
+        --accent-color: #FF9800;
         --dark-color: #1e293b;
         --light-color: #f8fafc;
     }
@@ -17,41 +16,90 @@
     .mobile-menu.active {
         max-height: 500px;
     }
+    
+    .logo-globe {
+        position: relative;
+        animation: rotate 20s linear infinite;
+    }
+    
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
 </style>
 
 <nav class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16 md:h-20">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center space-x-2">
-                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center" style="background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));">
-                        <svg class="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+        <div class="flex items-center justify-between h-14 md:h-16">
+            <!-- Logo - Left Side -->
+            <div class="flex items-center flex-shrink-0">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                        <!-- Globe with Network Lines (Similar to HelpLine Logo) -->
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-white logo-globe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                            <path d="M12 3c2.5 3 2.5 6 0 9m0 0c-2.5 3-2.5 6 0 9m0-9c2.5-3 2.5-6 0-9m0 9c-2.5-3-2.5-6 0-9" stroke-width="1.5"/>
+                            <line x1="3" y1="12" x2="21" y2="12" stroke-width="2"/>
                         </svg>
+                        <!-- Connection Dots -->
+                        <div class="absolute -top-1 -right-1 w-3 h-3 rounded-full" style="background-color: var(--accent-color);"></div>
                     </div>
-                    <span class="text-xl md:text-2xl font-bold" style="color: var(--dark-color);">Study<span style="color: var(--primary-color);">Abroad</span></span>
+                    <div>
+                        <span class="text-xl md:text-2xl font-black tracking-tight" style="color: var(--primary-color);">HELP</span><span class="text-xl md:text-2xl font-black tracking-tight" style="color: var(--accent-color);">LINE</span>
+                    </div>
                 </a>
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="font-medium transition duration-300 border-b-2" style="color: var(--dark-color); border-color: var(--primary-color);" onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--primary-color')"
-                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--dark-color')">Home</a>
+            <!-- Desktop Navigation Items - Absolute Center -->
+            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 font-inter">
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="relative text-gray-500 text-[--primary-color] pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[--primary-color]">About</a>
 
-                <a href="programs.html" class="font-medium transition duration-300 border-b-2 border-transparent" style="color: var(--dark-color);" onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--primary-color'); this.style.borderColor=getComputedStyle(document.documentElement).getPropertyValue('--primary-color')"
-                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--dark-color'); this.style.borderColor='transparent'">Programs</a>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1.5 text-gray-500 hover:text-[--primary-color] transition-all duration-300 cursor-pointer">
+                <span>Study Abroad</span>
+                <svg class="w-4 h-4 transition-transform duration-500 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
 
-                <a href="universities.html" class="font-medium transition duration-300 border-b-2 border-transparent" style="color: var(--dark-color);" onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--primary-color'); this.style.borderColor=getComputedStyle(document.documentElement).getPropertyValue('--primary-color')"
-                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--dark-color'); this.style.borderColor='transparent'">Universities</a>
+                        <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-40 bg-white/90 backdrop-blur-md border border-gray-100 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] opacity-0 invisible scale-95 -translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:scale-100 group-hover:translate-y-0 transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) z-50 overflow-hidden">
+                            <div class="p-2 flex flex-col gap-1">
+                                <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:bg-[--primary-color]/10 hover:text-[--primary-color] rounded-xl transition-all">USA</a>
+                                <a href="#" class="flex items-center px-4 py-2.5 text-gray-600 hover:bg-[--primary-color]/10 hover:text-[--primary-color] rounded-xl transition-all">Canada</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:bg-[--primary-color]/10 hover:text-[--primary-color] rounded-xl transition-all">UK</a>
+                                <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:bg-[--primary-color]/10 hover:text-[--primary-color] rounded-xl transition-all">Australia</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <a href="about.html" class="font-medium transition duration-300 border-b-2 border-transparent" style="color: var(--dark-color);" onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--primary-color'); this.style.borderColor=getComputedStyle(document.documentElement).getPropertyValue('--primary-color')"
-                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--dark-color'); this.style.borderColor='transparent'">About</a>
+                    <a href="services.html" class="relative text-gray-500 hover:text-[--primary-color]  pb-1 transition-all duration-300
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[--primary-color] after:transition-all after:duration-300 hover:after:w-full">Service</a>
 
-                <a href="contact.html" class="font-medium transition duration-300 border-b-2 border-transparent" style="color: var(--dark-color);" onmouseover="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--primary-color'); this.style.borderColor=getComputedStyle(document.documentElement).getPropertyValue('--primary-color')"
-                    onmouseout="this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--dark-color'); this.style.borderColor='transparent'">Contact</a>
+                    <a href="about.html" class="relative text-gray-500 hover:text-[--primary-color]  pb-1 transition-all duration-300
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[--primary-color] after:transition-all after:duration-300 hover:after:w-full">Success Story</a>
 
-                <a href="apply.html" class="text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition duration-300 transform" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">Apply Now</a>
+                    <a href="contact.html" class="relative text-gray-500 hover:text-[--primary-color]  pb-1 transition-all duration-300
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[--primary-color] after:transition-all after:duration-300 hover:after:w-full">Blog</a>
+
+                    <a href="contact.html" class="relative text-gray-500 hover:text-[--primary-color]  pb-1 transition-all duration-300
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[--primary-color] after:transition-all after:duration-300 hover:after:w-full">Event</a>
+
+                    <a href="contact.html" class="relative text-gray-500 hover:text-[--primary-color]  pb-1 transition-all duration-300
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[--primary-color] after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+
+                </div>
+            </div>
+
+            <!-- Get Started Button - Right Side (Desktop) -->
+            <div class="hidden md:flex items-center flex-shrink-0">
+                <a href="get-started.html" class="text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+       Consultation
+    </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -68,17 +116,17 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 rounded-md font-medium" style="color: var(--dark-color); background-color: rgba(37, 99, 235, 0.1);">Home</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md font-semibold" style="color: var(--dark-color); background-color: rgba(30, 136, 229, 0.1);">Home</a>
 
-                <a href="programs.html" class="block px-3 py-2 rounded-md font-medium transition hover:bg-blue-50" style="color: var(--dark-color);">Programs</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md font-semibold transition hover:bg-blue-50" style="color: var(--dark-color);">Services</a>
 
-                <a href="universities.html" class="block px-3 py-2 rounded-md font-medium transition hover:bg-blue-50" style="color: var(--dark-color);">Universities</a>
+                <a href="support.html" class="block px-3 py-2 rounded-md font-semibold transition hover:bg-blue-50" style="color: var(--dark-color);">Support</a>
 
-                <a href="about.html" class="block px-3 py-2 rounded-md font-medium transition hover:bg-blue-50" style="color: var(--dark-color);">About</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md font-semibold transition hover:bg-blue-50" style="color: var(--dark-color);">About</a>
 
-                <a href="contact.html" class="block px-3 py-2 rounded-md font-medium transition hover:bg-blue-50" style="color: var(--dark-color);">Contact</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md font-semibold transition hover:bg-blue-50" style="color: var(--dark-color);">Contact</a>
 
-                <a href="apply.html" class="block px-3 py-2 rounded-md text-white font-medium text-center mt-2" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">Apply Now</a>
+                <a href="get-started.html" class="block px-3 py-2 rounded-md text-white font-semibold text-center mt-2" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">Apply now</a>
             </div>
         </div>
     </div>
