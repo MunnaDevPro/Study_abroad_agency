@@ -35,11 +35,24 @@
     <meta property="og:type" content="website">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@600,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .hero-text {
+            font-family: 'General Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+    </style>
 
 </head>
 
@@ -60,7 +73,7 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #fef2f2 0%, #edeef4 50%, #c7dbe8 100%);
+            background: linear-gradient(135deg, hsl(240, 14%, 99%) 0%, #edeef4 50%, #ebebef 100%);
         }
         
         .floating {
@@ -88,12 +101,12 @@
         <div class="container max-w-7xl  mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-2  items-center">
                 <!-- Left Content -->
-                <div class="space-y-6 lg:space-y-6">
+                <div data-aos="fade-right" data-aos-duration="700" class="mt-3 space-y-6 lg:space-y-8">
 
 
                     <!-- Main Heading -->
                     <div class="space-y-1">
-                        <h1 class="text-3xl font-inter md:text-4xl lg:text-6xl xl:text-5xl font-bold text-gray-800 leading-tight">
+                        <h1 class="hero-text text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none ">
                             <span class="text-[var(--primary-color)]">Study Abroad</span> with Confidence Your Trusted Global<span class="text-[var(--accent-color)]">  Education</span> Partner
 
 
@@ -101,24 +114,47 @@
                     </div>
 
                     <!-- Description -->
-                    <p class=" text-gray-500 font-inter md:text-lg leading-tight max-w-md ">
+                    <p class=" text-gray-500 font-inter text-[18px] font-normal leading-none ">
                         We help students secure admissions and student visas in top universitiesacross Australia, the UK, Canada, New Zeland & Europe with expert guidance and a transparent process
                     </p>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4 items-center pt-2 ">
-                        <!-- <button class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-7 py-3.5 rounded-full shadow-md transition-all duration-300 flex items-center gap-2 ">
-                        Start Free Trial
-                        <svg class="w-4 h-4 " fill="none " stroke="currentColor " viewBox="0 0 24 24 ">
-                        <path stroke-linecap="round " stroke-linejoin="round " stroke-width="2.5 " d="M17 8l4 4m0 0l-4 4m4-4H3 "/>
+                    <div class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 gap-3 lg:gap-6">
+                        <div data-aos="zoom-in" data-aos-duration="600" class="flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 border border-gray-200 transform hover:scale-[1.02] animate-pop-in" style="animation-delay: 0.1s;">
+                            <div class="mb-2 text-malta-blue bg-blue-100 p-2 rounded-full">
+                                <svg class="text-blue-800  w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                         </svg>
-                    </button> -->
-
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-xs mb-0.5 uppercase tracking-wider text-center">
+                                23+ Years Experience</h3>
+                            <p class="text-gray-500 text-xs text-center">Trusted expertise 2001</p>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-duration="700" class="flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 border border-gray-200 transform hover:scale-[1.02] animate-pop-in" style="animation-delay: 0.2s;">
+                            <div class="mb-2 text-malta-blue bg-blue-100 p-2 rounded-full">
+                                <svg class="text-blue-800 w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+            </svg>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-xs mb-0.5 uppercase tracking-wider text-center">
+                                5000+ Students</h3>
+                            <p class="text-gray-500 text-xs text-center">Successfully assisted worldwide</p>
+                        </div>
+                        <div data-aos="zoom-in" data-aos-duration="800" class="flex flex-col items-center p-3 sm:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 border border-gray-200 transform hover:scale-[1.02] animate-pop-in" style="animation-delay: 0.3s;">
+                            <div class="mb-2 text-malta-blue bg-blue-100 p-2 rounded-full">
+                                <svg class="text-blue-800 w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-xs mb-0.5 uppercase tracking-wider text-center">
+                                High Success Rate</h3>
+                            <p class="text-gray-500 text-xs text-center">Proven track record in visas</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Right Content - Image Section -->
-                <div class="relative h-[400px] lg:h-[450px] flex items-end justify-center mt-16">
+                <div data-aos="fade-left" data-aos-duration="700" class="relative h-[400px] lg:h-[450px] flex items-end justify-center lg:mt-16">
 
                     <!-- Person Image -->
                     <div class="relative z-10 hero-image-fade lg:ml-20">
@@ -130,6 +166,172 @@
         </div>
     </section>
 
+
+
+
+    <!-- why choose us -->
+    <style>
+        .animate-fadeIn {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <div class="w-full bg-white py-16 px-6 md:px-12 lg:px-24">
+        <div class=" mx-auto flex flex-col lg:flex-row items-center gap-16">
+
+            <div class="relative w-full lg:w-1/2 flex justify-center">
+                <div class="relative">
+
+                    <!-- <div class="absolute -top-9 -right-0 bg-[var(--primary-color)] text-white px-6 py-6 z-20 flex flex-col items-center justify-center rounded-tr-[85px] rounded-bl-3xl ">
+                        <h2 class="text-3xl font-bold leading-none">20+</h2>
+                        <p class="text-[10px] uppercase font-semibold leading-tight mt-1 text-center">Years Of<br>Experience</p>
+                    </div> -->
+
+                    <div data-aos="zoom-in-right" data-aos-duration="800" class="relative z-10 w-[300px] sm:w-[400px] lg:w-[400px]">
+                        <div class="rounded-tl-[160px] rounded-br-[120px] rounded-tr-3xl rounded-bl-3xl overflow-hidden border-[15px] border-white shadow-md">
+                            <img src="/assets/images/why_choose_us_photo.png" alt="Consultant" class="w-full h-[420px] object-cover">
+                        </div>
+
+                        <!-- <div class="absolute bottom-10 -right-12 w-2/3 hidden sm:block">
+                            <div class="border-[10px] border-white rounded-3xl overflow-hidden shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1521791136364-798a7bc0d267?auto=format&fit=crop&q=80&w=600" alt="Process" class="w-full h-64 object-cover">
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- <div class="absolute -bottom-6 -left-8 bg-[#111827] text-white flex items-center gap-4 py-4 px-6 rounded-tl-3xl rounded-br-3xl rounded-tr-[50px] rounded-bl-[50px] shadow-sm z-30 min-w-[200px]">
+                        <div class="bg-white p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#EB4432]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.509-8.954.058-.028 2.022-1 2.022-1L8.417 2 4.5 4.106c-3.935 2.026 1.832 12.446 5.447 15.551 3.485 2.996 13.441 7.311 14.553 5.069L20 22.621z" />
+            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest">Call For Consultation</p>
+                            <p class="text-xl font-bold text-[#EB4432]">+01 567 114 3312</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <h5 data-aos="fade-left" data-aos-duration="700" class="text-[var(--primary-color)] font-bold uppercase tracking-widest text-sm mb-1">Why Choose Us</h5>
+                <h1 data-aos="fade-left" data-aos-duration="700" class="hero-text text-4xl md:text-4xl font-black text-gray-700 leading-[1.1] mb-4">
+                    <span class="text-[var(--primary-color)]">YOUR IMMIGRATION</span> FOR SUCCESS PARTNER
+                </h1>
+
+                <p data-aos="fade-left" data-aos-duration="700" class="text-gray-500 text-md leading-tight mb-6">
+                    We Are Your Trusted Immigration Partner, Providing Expert Guidance, Personalized Solutions, And Reliable Support Throughout The Visa And Immigration Process To Ensure Smooth, Successful, And Stress-Free Journeys Abroad.
+                </p>
+
+                <div data-aos="fade-left" data-aos-duration="700" class="w-full">
+                    <div class="flex items-center gap-4 mb-6">
+                        <button id="btn-mission" onclick="showTab('mission')" class="cursor-pointer px-6 py-2 font-bold border border-gray-200 text-white bg-[var(--primary-color)] rounded-full shadow-lg transition-all duration-300 text-lg">
+                Our Mission
+            </button>
+                        <button id="btn-vision" onclick="showTab('vision')" class="cursor-pointer border border-gray-200 px-6 py-2 font-bold text-gray-600 bg-transparent rounded-full transition-all duration-300 text-lg">
+                Our Vision
+            </button>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-duration="700" id="content-mission" class="block animate-fadeIn">
+                        <p class="text-gray-500 font-medium leading-relaxed border-l-4 border-gray-200 pl-6 mb-8 italic">
+                            Our Mission is to simplify the complex visa process by providing tailored consultancy for Students and Professionals, ensuring a 100% transparent journey.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8 mb-10">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Student Visa Assistance</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Skilled Work Permits</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Error-Free Documentation</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Global University Network</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-duration="700" id="content-vision" class="hidden animate-fadeIn">
+                        <p class="text-gray-500 font-medium leading-relaxed border-l-4 border-gray-200 pl-6 mb-8 italic">
+                            Our Vision is to be the leading global immigration bridge, empowering individuals to achieve Permanent Residency and career success through innovative solutions.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8 mb-10">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">PR & Citizenship Services</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Post-Landing Support</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Family Reunion Visas</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
+                                <span class="text-gray-700 font-semibold text-[17px] tracking-tight">High Success Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function showTab(tabName) {
+            const missionBtn = document.getElementById('btn-mission');
+            const visionBtn = document.getElementById('btn-vision');
+            const missionContent = document.getElementById('content-mission');
+            const visionContent = document.getElementById('content-vision');
+
+            if (tabName === 'mission') {
+                // Style for Mission Active
+                missionBtn.classList.add('bg-[var(--primary-color)]', 'text-white', 'shadow-lg');
+                missionBtn.classList.remove('text-gray-500', 'bg-transparent', 'border-gray-200');
+
+                visionBtn.classList.add('text-gray-500', 'bg-transparent', 'border-gray-200');
+                visionBtn.classList.remove('bg-[var(--primary-color)]', 'text-white', 'shadow-lg');
+
+                missionContent.classList.remove('hidden');
+                visionContent.classList.add('hidden');
+            } else {
+                // Style for Vision Active
+                visionBtn.classList.add('bg-[var(--primary-color)]', 'text-white', 'shadow-lg');
+                visionBtn.classList.remove('text-gray-500', 'bg-transparent', 'border-gray-200');
+
+                missionBtn.classList.add('text-gray-500', 'bg-transparent', 'border-gray-200');
+                missionBtn.classList.remove('bg-[var(--primary-color)]', 'text-white', 'shadow-lg');
+
+                visionContent.classList.remove('hidden');
+                missionContent.classList.add('hidden');
+            }
+        }
+    </script>
+
+
+
+
+
     <!-- Footer -->
     <div data-include="components/footer.html "></div>
 
@@ -138,6 +340,13 @@
     <script src="assets/js/include.js "></script>
     <script src="assets/js/slider.js "></script>
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- aos cdn js link -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -9,4 +9,12 @@ module.exports = {
         extend: {},
     },
     plugins: [],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                'general': ['General Sans', 'sans-serif'],
+            },
+        },
+    },
 }

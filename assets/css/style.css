@@ -1,7 +1,11 @@
-:root {
-    --primary-color: #1E88E5;
-    --secondary-color: #42A5F5;
-    --accent-color: #FF9800;
-    --text-main: #1e293b;
-    --bg-light: #f8fafc;
-}
+  html {
+      scroll-behavior: smooth;
+  }
+  
+  :root {
+      --primary-color: #1E88E5;
+      --secondary-color: #42A5F5;
+      --accent-color: #FF9800;
+      --text-main: #1e293b;
+      --bg-light: #f8fafc;
+  }
