@@ -48,13 +48,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     <style>
-        .hero-text {
-            font-family: 'General Sans', sans-serif;
-            font-weight: 100;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: var(--size-title);
+            font-weight: var(--font-title-weight);
+            /* line-height: var(--line-height-tight); */
+        }
+        
+        .hero-desc {
+            font-size: var(--size-desc);
+            font-weight: var(--font-desc-weight);
+            color: var(--color-desc);
+            line-height: var(--line-height-normal);
         }
     </style>
 
@@ -110,15 +120,15 @@
 
                     <!-- Main Heading -->
                     <div class="space-y-1">
-                        <h1 class="hero-text text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none ">
-                            <span class="text-[var(--primary-color)] hero-text ">Study Abroad</span> with Confidence Your Trusted Global<span class="text-[var(--accent-color)]">  Education</span> Partner
+                        <h1 class="hero-title text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none ">
+                            <span class="text-[var(--primary-color)]  ">Study Abroad</span> and <span class="text-[var(--accent-color)]">  Education</span> Partner
 
 
                         </h1>
                     </div>
 
                     <!-- Description -->
-                    <p class=" text-gray-500 font-inter text-[18px] font-normal leading-none ">
+                    <p class="hero-desc text-gray-500 font-inter text-[18px] leading-none ">
                         We help students secure admissions and student visas in top universitiesacross Australia, the UK, Canada, New Zeland & Europe with expert guidance and a transparent process
                     </p>
 
@@ -230,12 +240,12 @@
                 </div>
 
                 <div class="w-full lg:w-1/2">
-                    <h5 data-aos="fade-left" data-aos-duration="700" class="text-[var(--primary-color)] font-bold uppercase tracking-widest text-sm mb-1">Why Choose Us</h5>
-                    <h1 data-aos="fade-left" data-aos-duration="700" class="hero-text text-4xl md:text-4xl font-black text-gray-700 leading-[1.1] mb-4">
-                        <span class="text-[var(--primary-color)] hero-text">YOUR IMMIGRATION</span> FOR SUCCESS PARTNER
+                    <h5 data-aos="fade-left" data-aos-duration="700" class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-1">Why Choose Us</h5>
+                    <h1 data-aos="fade-left" data-aos-duration="700" style="font-family: var(--font-heading);" class=" text-2xl md:text-4xl lg:text-4xl mb-4">
+                        <span class="text-[var(--primary-color)] hero-text">Your Immigration</span> for Success Partner
                     </h1>
 
-                    <p data-aos="fade-left" data-aos-duration="700" class="text-gray-500 text-md leading-tight mb-6">
+                    <p data-aos="fade-left" data-aos-duration="700" class="hero-desc  text-md leading-tight mb-6">
                         We Are Your Trusted Immigration Partner, Providing Expert Guidance, Personalized Solutions, And Reliable Support Throughout The Visa And Immigration Process To Ensure Smooth, Successful, And Stress-Free Journeys Abroad.
                     </p>
 
@@ -250,7 +260,7 @@
                         </div>
 
                         <div data-aos="fade-left" data-aos-duration="700" id="content-mission" class="block animate-fadeIn">
-                            <p class="text-gray-500 font-medium leading-relaxed border-l-4 border-gray-200 pl-6 mb-8 italic">
+                            <p class="hero-desc text-gray-500 font-medium leading-relaxed border-l-4 border-gray-200 pl-6 mb-8 italic">
                                 Our Mission is to simplify the complex visa process by providing tailored consultancy for Students and Professionals, ensuring a 100% transparent journey.
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8 mb-10 font-inter">
@@ -274,10 +284,10 @@
                         </div>
 
                         <div data-aos="fade-left" data-aos-duration="700" id="content-vision" class="hidden animate-fadeIn">
-                            <p class="text-gray-500 font-medium leading-relaxed border-l-4 border-gray-200 pl-6 mb-8 italic">
+                            <p class="hero-desc text-gray-500 font-medium leading-relaxed border-l-4 border-gray-200 pl-6 mb-8 italic">
                                 Our Vision is to be the leading global immigration bridge, empowering individuals to achieve Permanent Residency and career success through innovative solutions.
                             </p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8 mb-10 font-inter">
+                            <div class="hero-desc grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8 mb-10 font-inter">
                                 <div class="flex items-center gap-2">
                                     <span class="text-[#004DBF] font-bold text-lg leading-none">»</span>
                                     <span class="text-gray-700 font-semibold text-[17px] tracking-tight">PR & Citizenship Services</span>
@@ -341,11 +351,11 @@
     <section class="relative mt-6 py-8">
 
         <div data-aos="zoom-in-up" data-aos-duration="1000" class="max-w-3xl mx-auto mb-10 px-6">
-            <h2 class="hero-text text-center text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3">
+            <h2 class="hero-title text-center text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3">
                 Study <span class="text-[var(--primary-color)]">Destinations</span>
             </h2>
-            <p class="text-gray-500 text-center font-inter">Choose Your Dream Study Destinations</p>
-            <p class="text-gray-500 text-center font-inter">
+            <p class="hero-desc  text-center font-inter">Choose Your Dream Study Destinations</p>
+            <p class="hero-desc  text-center font-inter">
                 Explore universities, tuition fees, intakes & visa process
             </p>
         </div>
@@ -356,143 +366,389 @@
                 <a href="" class="study-card group transition-all duration-500 " data-aos="fade-up" data-aos-duration="800" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80" alt="UK" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in UK</h2>
+                    <h2 style="position: absolute; bottom: 30px; left: 30px;  font-size: 24px; font-weight: bold; margin: 0;;" class="text-gray-300 group-hover:text-gray-100 duration-300">Study in UK</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="900" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800&q=80" alt="USA" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in USA</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in USA</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="1000" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=80" alt="Canada" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in Canada</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in Canada</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="1100" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80" alt="Australia" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in Australia</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in Australia</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="800" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=800&q=80" alt="Germany" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in Germany</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in Germany</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="900" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1595867818082-083862f3d630?w=800&q=80" alt="Europe" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in Europe</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in Europe</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="1000" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=800&q=80" alt="Germany" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in Germany</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in Germany</h2>
                 </a>
 
                 <a href="" class="study-card group transition-all duration-500" data-aos="fade-up" data-aos-duration="1100" style="position: relative; border-radius: 20px; overflow: hidden; height: 220px; cursor: pointer; display: block;">
                     <img src="https://images.unsplash.com/photo-1595867818082-083862f3d630?w=800&q=80" alt="Europe" class="transition-transform duration-500 ease-in-out group-hover:scale-110" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));"></div>
-                    <h2 style="position: absolute; bottom: 30px; left: 30px; color: white; font-size: 24px; font-weight: bold; margin: 0;">Study in Europe</h2>
+                    <h2 class="text-gray-300 group-hover:text-gray-100 duration-300" style="position: absolute; bottom: 30px; left: 30px; font-size: 24px; font-weight: bold; margin: 0;">Study in Europe</h2>
                 </a>
             </div>
         </div>
     </section>
-
-
 
 
     <!-- top university -->
-    <section class="py-16 bg-white overflow-hidden">
-        <div class="container max-w-7xl mx-auto px-6 lg:px-12">
+    <style>
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            padding: 0 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .carousel-slide {
+                min-width: 50%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .carousel-slide {
+                min-width: 25%;
+            }
+        }
+        
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            transform: scale(1.1);
+            background-color: rgba(31, 41, 55, 0.9);
+        }
+        
+        .nav-button:active {
+            transform: scale(0.95);
+        }
+        
+        .nav-button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        .nav-button:disabled:hover {
+            transform: scale(1);
+            background-color: rgba(31, 41, 55, 0.6);
+        }
+    </style>
+    <div class="mb-6  container max-w-7xl mx-auto px-6 lg:px-12 lg:mt-24">
 
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-                <div data-aos="fade-right">
-                    <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest mb-2">Partner Universities</h4>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
-                        Discover <span class="text-gray-900">top-rated universities</span>
-                    </h2>
-                    <p class="text-gray-600 text-lg">Start your success story at a renowned university with our guidance.</p>
-                </div>
-
-                <div data-aos="fade-left">
-                    <a href="#" class="group flex items-center gap-3 bg-gray-50 hover:bg-[var] hover:text-white transition-all duration-300 px-6 py-3 rounded-full border border-gray-200 font-semibold text-gray-900">
-                    View All
-                    <span class="bg-[var(--primary-color)] group-hover:bg-white text-white group-hover:text-blue-900 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="9 5l7 7-7 7" />
-                        </svg>
-                    </span>
-                </a>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 hover:scale-105 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div class="relative z-10">
-                        <div class="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-white rounded-full shadow-md scale-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Alberta_logo.svg/1200px-University_of_Alberta_logo.svg.png" alt="University of Alberta" class="relative z-10 w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-700">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-900 transition-colors duration-500">University of Alberta</h3>
-                        <span class="inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-black group-hover:text-white transition-all duration-500 group-hover:scale-110">
-                        Edmonton, Canada
-                    </span>
-                    </div>
-                </div>
-
-                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 hover:scale-105 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div class="relative z-10">
-                        <div class="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-white rounded-full shadow-md scale-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Western_Sydney_University_logo.svg/1200px-Western_Sydney_University_logo.svg.png" alt="Western Sydney University" class="relative z-10 w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-700">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-purple-900 transition-colors duration-500">Western Sydney University</h3>
-                        <span class="inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-black group-hover:text-white transition-all duration-500 group-hover:scale-110">
-                        Sydney City, Australia
-                    </span>
-                    </div>
-                </div>
-
-                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 hover:scale-105 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div class="relative z-10">
-                        <div class="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-white rounded-full shadow-md scale-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/University_of_Windsor_logo.svg/1200px-University_of_Windsor_logo.svg.png" alt="University of Windsor" class="relative z-10 w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-700">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-green-900 transition-colors duration-500">University Of Windsor</h3>
-                        <span class="inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-black group-hover:text-white transition-all duration-500 group-hover:scale-110">
-                        Ontario, Canada
-                    </span>
-                    </div>
-                </div>
-
-                <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 hover:scale-105 text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div class="relative z-10">
-                        <div class="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-white rounded-full shadow-md scale-100 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700"></div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/York_University_logo.svg/1200px-York_University_logo.svg.png" alt="York University" class="relative z-10 w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-700">
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-red-900 transition-colors duration-500">York University</h3>
-                        <span class="inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-black group-hover:text-white transition-all duration-500 group-hover:scale-110">
-                        Toronto, Canada
-                    </span>
-                    </div>
-                </div>
-
+        <!-- Header Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <h5 data-aos="fade-right" data-aos-duration="700" class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-1">PARTNER UNIVERSITIES</h5>
+                <h2 data-aos="fade-right" data-aos-duration="700" class="hero-title text-3xl md:text-3xl font-bold text-gray-900 mb-1">
+                    Our <span class="text-gray-900">Global University Partners</span>
+                </h2>
+                <p data-aos="fade-right" data-aos-duration="700" class="text-gray-600 hero-desc">We collaborate with reputed universities and institutions worldwide to ensure globally recognized education</p>
             </div>
         </div>
-    </section>
+
+        <div class="relative">
+            <!-- Left Navigation Button -->
+            <button id="prevBtn" class="cursor-pointer nav-button absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-gray-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl -ml-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div id="carouselTrack" class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div data-aos="fade-up" data-aos-duration="600" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/columbia.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Columbia
+                                </h3>
+
+                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+            Edmonton, Columbia
+        </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div data-aos="fade-up" data-aos-duration="800" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/hardvard.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Hardvard
+                                </h3>
+
+                                <span class=" cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+            Edmonton, Canada
+        </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div data-aos="fade-up" data-aos-duration="1000" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/Alberta.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Alberta
+                                </h3>
+
+                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+            Edmonton, Canada
+        </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div data-aos="fade-up" data-aos-duration="1200" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/windsor.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Alberta
+                                </h3>
+
+                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+            Edmonton, Canada
+        </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/Alberta.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Alberta
+                                </h3>
+
+                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+            Edmonton, Canada
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Navigation Button -->
+            <button id="nextBtn" class="cursor-pointer nav-button absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-gray-600 cursor-pointer text-white p-4 rounded-full shadow-lg hover:shadow-xl -mr-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Dots Indicator -->
+        <div id="dotsContainer" class="flex justify-center gap-2 mt-6"></div>
+
+    </div>
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+        const slides = document.querySelectorAll('.carousel-slide');
+
+        let currentIndex = 0;
+        let slidesPerView = getSlidesPerView();
+        const totalSlides = slides.length;
+        const maxIndex = totalSlides - slidesPerView;
+
+        function getSlidesPerView() {
+            const width = window.innerWidth;
+            if (width >= 1024) return 4;
+            if (width >= 640) return 2;
+            return 1;
+        }
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            const dotsCount = maxIndex + 1;
+            for (let i = 0; i <= maxIndex; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'w-3 h-3 rounded-full transition-all duration-300 ' +
+                    (i === currentIndex ? 'bg-gray-600 w-8' : 'bg-gray-300');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateCarousel() {
+            const slideWidth = 100 / slidesPerView;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            updateButtons();
+            updateDots();
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= maxIndex;
+        }
+
+        function updateDots() {
+            const dots = dotsContainer.querySelectorAll('button');
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.className = 'w-3 h-3 rounded-full transition-all duration-300 bg-gray-600 w-8';
+                } else {
+                    dot.className = 'w-3 h-3 rounded-full transition-all duration-300 bg-gray-300';
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
+            updateCarousel();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            const newSlidesPerView = getSlidesPerView();
+            if (newSlidesPerView !== slidesPerView) {
+                slidesPerView = newSlidesPerView;
+                currentIndex = Math.min(currentIndex, totalSlides - slidesPerView);
+                createDots();
+                updateCarousel();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchStartX - touchEndX > 50) {
+                nextBtn.click();
+            }
+            if (touchEndX - touchStartX > 50) {
+                prevBtn.click();
+            }
+        }
+
+        // Initialize
+        createDots();
+        updateCarousel();
+    </script>
+
+
+
 
     <!-- Footer -->
     <div data-include="components/footer.html "></div>
@@ -511,4 +767,4 @@
     </script>
 </body>
 
-</html>
+</htmlb5up

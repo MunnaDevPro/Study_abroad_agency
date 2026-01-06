@@ -2,10 +2,25 @@
       scroll-behavior: smooth;
   }
   
-  :root {
+   :root {
       --primary-color: #1E88E5;
       --secondary-color: #42A5F5;
       --accent-color: #FF9800;
       --text-main: #1e293b;
       --bg-light: #f8fafc;
+      --color-title: #374151;
+      --font-heading: "Noto Sans Georgian", sans-serif;
+      /* gray-700 */
+      --color-desc: #6b7280;
+      /* gray-500 */
+      /* Typography Settings */
+      --font-main: 'Inter', sans-serif;
+      --font-title-weight: 500;
+      --font-desc-weight: 400;
+      /* Responsive Sizes (Using clamp for smoothness) */
+      --size-title: clamp(2rem, 5vw, 4rem);
+      --size-desc: 1rem;
+      /* 18px equivalent */
+      --line-height-tight: 1;
+      --line-height-normal: 1.6;
   }
