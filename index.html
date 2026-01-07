@@ -52,7 +52,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+
+    <!-- loader -->
     <style>
+        /* for hero section */
+        
         .hero-title {
             font-family: var(--font-heading);
             font-size: var(--size-title);
@@ -76,6 +80,7 @@
 </head>
 
 <body>
+
 
     <!-- navbar -->
     <style>
@@ -352,7 +357,7 @@
 
     <section class="relative overflow-hidden  dot-pattern">
 
-        <div class="container max-w-7xl  mx-auto px-6 lg:px-12 gradient-bg rounded-2xl mt-20">
+        <div class="container max-w-7xl  mx-auto px-6 lg:px-12 gradient-bg rounded-4xl mt-20">
             <div class="grid lg:grid-cols-2  items-center">
                 <!-- Left Content -->
                 <div data-aos="fade-right" data-aos-duration="700" class="mt-3 space-y-6 lg:space-y-8">
@@ -480,7 +485,7 @@
         <div class="container max-w-7xl mx-auto px-6 lg:px-12">
             <div class=" flex flex-col lg:flex-row items-center gap-16">
 
-                <div class="relative w-full lg:w-1/2 flex justify-center">
+                <div class="relative w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
                     <div class="relative">
 
                         <!-- <div class="absolute -top-9 -right-0 bg-[var(--primary-color)] text-white px-6 py-6 z-20 flex flex-col items-center justify-center rounded-tr-[85px] rounded-bl-3xl ">
@@ -514,7 +519,7 @@
                     </div>
                 </div>
 
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-1/2 lg:order-2">
                     <div data-aos="fade-left" data-aos-duration="700" class="flex items-center space-x-4 mb-2">
                         <div class="custom-line-left"></div>
 
@@ -633,7 +638,7 @@
     <section class="relative mt-6 py-8">
 
         <div data-aos="zoom-in-up" data-aos-duration="900" class="max-w-3xl mx-auto mb-10 px-6">
-            <h2 class="hero-title text-center text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3">
+            <h2 class="hero-title text-center text-4xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3">
                 Study <span class="text-[var(--primary-color)]">Destinations</span>
             </h2>
             <p class="hero-desc  text-center font-inter">Choose Your Dream Study Destinations</p>
@@ -1133,9 +1138,9 @@
             }
         }
     </style>
-    <section class="lg:mt-20 mb-20">
+    <section class="lg:mt-20 ">
         <!-- Hero Section -->
-        <div class="container max-w-7xl  mx-auto px-6 lg:px-12 py-16 rounded-2xl bg-gray-50">
+        <div class="container max-w-7xl  mx-auto px-6 lg:px-12 py-16 rounded-4xl bg-gray-50">
             <div data-aos="zoom-in-up" data-aos-duration="900" class="text-center mb-16 ">
                 <h1 class="hero-title  md:text-6xl font-bold mb-6">
                     Our Services
@@ -1148,7 +1153,7 @@
             </div>
 
             <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16 ">
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-4 ">
 
                 <!-- Application & Admission Support -->
                 <div data-aos="zoom-in-up" data-aos-duration="900" class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-blue-200 transition-all duration-1000 ease-in-out cursor-pointer">
@@ -1347,58 +1352,97 @@
 
 
     <!-- who we are -->
-    <section class="py-16 px-6 md:px-12 lg:px-24 bg-white font-sans overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section class="py-16 px-6 md:px-12 lg:px-14 bg-white font-sans overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
 
-            <div class="relative w-full h-[500px] md:h-[600px] flex items-center">
+            <div data-aos="zoom-in-right" data-aos-duration="700" class="mt-14 relative w-full order-2 lg:order-1">
 
-                <div class="absolute top-0 right-10 w-32 h-32 opacity-20 pointer-events-none z-0">
-                    <svg viewBox="0 0 100 100" class="w-full h-full text-gray-400 stroke-current fill-none">
-                <path d="M0,80 Q30,70 50,40 T100,20" stroke-dasharray="4 4" />
-                <path d="M95,15 L100,20 L95,25" />
-                </svg>
-                </div>
+                <div class="hidden md:flex relative w-full h-[650px] items-center justify-center">
+                    <div class="absolute top-2 right-0 w-48 h-36 opacity-30 pointer-events-none z-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-full text-gray-500 stroke-current fill-none">
+                                <path class="animated-line" 
+                                    d="M10,85 Q35,75 55,45 T95,18" 
+                                    stroke-dasharray="6" 
+                                    stroke-width="1" />
+                                
+                                <path d="M88,13 L95,18 L90,24" stroke-width="2" fill="currentColor" />
+                            </svg>
 
-                <div class="absolute left-0 top-12 w-[38%] h-[80%] z-10">
-                    <div class="absolute -top-4 -left-4 w-full h-full border-[1.5px] border-blue-300 rounded-[2.5rem]"></div>
-                    <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden border-[6px] border-white shadow-md">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600" alt="Man with passport" class="w-full h-full object-cover">
+                        <style>
+                            .animated-line {
+                                animation: flow 10s linear infinite;
+                            }
+                            
+                            @keyframes flow {
+                                from {
+                                    stroke-dashoffset: 100;
+                                }
+                                to {
+                                    stroke-dashoffset: 0;
+                                }
+                            }
+                        </style>
+                    </div>
+
+                    <div class="relative w-[90%] max-w-6xl h-full flex items-center justify-center">
+                        <div class="absolute left-[2%] top-[12%] w-[32%] h-[68%] z-10 transform hover:scale-101 transition-transform duration-300">
+                            <div class="absolute -top-4 -left-4 w-full h-full border-[2px] border-[var(--primary-color)] rounded-[2.2rem] opacity-30"></div>
+                            <div class="relative w-full h-full rounded-[2.2rem] overflow-hidden border-[6px] border-white shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600" alt="Man with passport" class="w-full h-full object-cover object-center">
+                            </div>
+                        </div>
+
+                        <div class="absolute left-[28%] top-[6%] w-[38%] h-[80%] z-30 transform hover:scale-101 transition-transform duration-500">
+                            <div class="relative w-full h-full rounded-[2.2rem] overflow-hidden border-[6px] border-white shadow-sm ring-2 ring-gray-200">
+                                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=600" alt="Woman traveling" class="w-full h-full object-cover object-center">
+                            </div>
+                        </div>
+
+                        <div class="absolute right-[1%] bottom-[10%] w-[40%] h-[72%] z-20 transform hover:scale-101 transition-transform duration-300">
+                            <div class="absolute -top-3 left-4 w-full h-full border-[2px] border-[var(--primary-color)] rounded-[2.2rem] opacity-40"></div>
+                            <div class="w-full h-full rounded-[2.2rem] overflow-hidden border-[6px] border-white shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600" alt="Group consultation" class="w-full h-full object-cover object-center">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="absolute left-[30%] top-6 w-[38%] h-[90%] z-20">
-                    <!-- <div class="absolute -top-4 -left-4 w-full h-full border-[1.5px] border-blue-300 rounded-[2.5rem]"></div> -->
-                    <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden border-[6px] border-white shadow-md">
-                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=600" alt="Woman traveling" class="w-full h-full object-cover">
+                <div class="flex md:hidden flex-col gap-6 px-4 py-10 items-center">
+                    <div class="relative w-full aspect-[4/5] max-w-[320px]">
+                        <div class="w-full h-full rounded-[2rem] overflow-hidden border-[4px] border-white shadow-lg ring-1 ring-gray-100">
+                            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=600" alt="Woman traveling" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="700" class="flex gap-4 w-full max-w-[400px]">
+                        <div class="relative w-1/2 aspect-square">
+                            <div class="w-full h-full rounded-[1.5rem] overflow-hidden border-[4px] border-white shadow-md">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600" alt="Man with passport" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="relative w-1/2 aspect-square">
+                            <div class="w-full h-full rounded-[1.5rem] overflow-hidden border-[4px] border-white shadow-md">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600" alt="Group consultation" class="w-full h-full object-cover">
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="absolute right-0 bottom-4 w-[45%] h-[85%] z-30">
-                    <div class="w-full h-full rounded-[2.5rem] rounded-tr-[6rem] overflow-hidden border-[6px] border-white shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600" alt="Group consultation" class="w-full h-full object-cover">
-                    </div>
-                </div>
-
             </div>
 
-
-
-            <div class="flex flex-col gap-6">
-                <div data-aos="fade-left" data-aos-duration="700" class="flex items-center space-x-4 mb-2">
+            <div class="flex flex-col gap-6 order-1 lg:order-2">
+                <div data-aos="fade-right" data-aos-duration="700" class="flex items-center space-x-4">
                     <div class="custom-line-left"></div>
-
-                    <h5 class="hero-desc  font-bold uppercase tracking-widest text-sm px-4 py-1 border border-gray-100 rounded-full bg-white">
+                    <h5 class="hero-desc font-bold uppercase tracking-widest text-sm px-4 py-1 border border-gray-100 rounded-full bg-white">
                         Who We Are
                     </h5>
-
                     <div class="custom-line-right"></div>
                 </div>
 
-                <h2 data-aos="fade-left" data-aos-duration="700" class="hero-title text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none">
-                    <span class="text-[var(--primary-color)]">Trusted Guidance</span> for Every Visa Jouney
-                </h2>
+                <h6 data-aos="fade-left" data-aos-duration="700" class="hero-title text-gray-700 leading-none w-full text-ellipsis">
+                    <span class="text-[var(--primary-color)]">Trusted Guidance</span> for Every Visa Journey
+                </h6>
 
-                <p data-aos="fade-left" data-aos-duration="700" class="hero-desc text-lg ">
+                <p data-aos="fade-left" data-aos-duration="700" class="hero-desc text-lg">
                     We Provide Expert Guidance For Every Visa Application, Ensuring Smooth Processing, Personalized Support, And Reliable Assistance To Make Your Travel Experience Seamless And Stress-Free."
                 </p>
 
@@ -1413,14 +1457,14 @@
                                 <span>Our Support Team</span>
                                 <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
                                     <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                        </svg>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                                </svg>
                                 </div>
                             </a>
                         </div>
                     </div>
 
-                    <ul class="space-y-3">
+                    <ul class="space-y-1">
                         <li class="flex items-center gap-3 font-bold text-slate-800">
                             <span class="text-[#004DBF] font-bold text-lg leading-none">»</span><span class="text-gray-700 font-semibold text-[17px] tracking-tight">Free Counseling</span>
                         </li>
@@ -1431,35 +1475,220 @@
                             <span class="text-[#004DBF] font-bold text-lg leading-none">»</span><span class="text-gray-700 font-semibold text-[17px] tracking-tight">Application Submission</span>
                         </li>
                         <li class="flex items-center gap-3 font-bold text-slate-800">
-                            <span class="text-[#004DBF] font-bold text-lg leading-none">»</span> <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Offer Letter</span></li>
+                            <span class="text-[#004DBF] font-bold text-lg leading-none">»</span> <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Offer Letter</span>
                         </li>
                         <li class="flex items-center gap-3 font-bold text-slate-800">
-                            <span class="text-[#004DBF] font-bold text-lg leading-none">»</span> <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Visa Processing</span></li>
+                            <span class="text-[#004DBF] font-bold text-lg leading-none">»</span> <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Visa Processing</span>
                         </li>
                         <li class="flex items-center gap-3 font-bold text-slate-800">
-                            <span class="text-[#004DBF] font-bold text-lg leading-none">»</span> <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Departure Support</span></li>
+                            <span class="text-[#004DBF] font-bold text-lg leading-none">»</span> <span class="text-gray-700 font-semibold text-[17px] tracking-tight">Departure Support</span>
                         </li>
                     </ul>
                 </div>
-
-
-                <!-- <div class="md:flex items-center flex-shrink-0 group">
-                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold">
-                        <span>Our Support Team</span>
-                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                        </svg>
-                        </div>
-                    </a>
-                </div> -->
-
-
             </div>
-
         </div>
     </section>
 
+
+
+    <!-- common fq question -->
+
+    <section class="bg-white py-16 px-6 md:px-12 lg:px-14 font-sans overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-start">
+
+            <div class="md:w-6/12">
+                <div data-aos="fade-right" data-aos-duration="700" class="flex items-center space-x-4">
+                    <div class="custom-line-left"></div>
+                    <h5 class="hero-desc font-bold uppercase tracking-widest text-sm px-4 py-1 border border-gray-100 rounded-full bg-white">
+
+                        <span class="hidden lg:inline">Frequently</span> Questions
+                    </h5>
+                    <div class="custom-line-right"></div>
+                </div>
+                <h2 data-aos="fade-right" data-aos-duration="700" class="hero-title leading-none mb-6 md:text-[20px]">
+                    <span class="text-[var(--primary-color)]">Common question</span> answered
+                </h2>
+                <p data-aos="fade-right" data-aos-duration="700" class="hero-desc">
+                    At the heart of our commitment to providing exceptional immigration solutions stands our trusted. At the heart of our commitment to providing exceptional immigration solutions stands our trusted.
+                </p>
+
+
+                <div data-aos="zoom-in-up" data-aos-duration="700" class="mt-4">
+                    <img src="/assets/images/faq_img.png" alt="Flags Illustration" class="w-full h-auto max-w-[450px]">
+                </div>
+            </div>
+
+            <div class="md:w-7/12 w-full space-y-5">
+
+                <div data-aos="fade-left" data-aos-duration="700" class="accordion-item border border-gray-200 rounded-[35px] bg-white overflow-hidden transition-all duration-500 hover:border-blue-200">
+                    <button class="cursor-pointer w-full flex items-center justify-between py-5 px-8 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                    <span class="font-inter text-lg font-semibold text-[#1a1a1a]">What services do you offer for students?</span>
+                    <div class="relative w-11 h-11 flex items-center justify-center rounded-full border border-gray-100 bg-[#f8fafd] icon-bg-effect shrink-0">
+                        <span class=" inline-block transition-transform duration-700 ease-in-out">
+                            <span class="icon text-2xl font-light text-gray-700 leading-none">+</span>
+                        </span>
+                    </div>
+                </button>
+                    <div class="accordion-content">
+                        <div class="overflow-hidden">
+                            <div class="px-9 pb-8 text-gray-500 space-y-4 text-[17px] leading-relaxed">
+                                <p>We provide full-scale support for international education including university selection and visa documentation.</p>
+                                <ul class="space-y-3 pt-1">
+                                    <li class="flex items-center gap-3">
+                                        <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Full Admission Guidance
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="700" class="accordion-item border border-gray-200 rounded-[35px] bg-white overflow-hidden transition-all duration-500 hover:border-blue-200">
+                    <button class="cursor-pointer w-full flex items-center justify-between py-5 px-8 text-left focus:outline-none" onclick="toggleAccordion(this)">
+            <span class="font-inter text-lg font-semibold text-[#1a1a1a]">How long does it take to get a visa?</span>
+            <div class="relative w-11 h-11 flex items-center justify-center rounded-full border border-gray-100 bg-[#f8fafd] icon-bg-effect shrink-0">
+                <span class=" inline-block transition-transform duration-700 ease-in-out">
+                    <span class="icon text-2xl font-light text-gray-700 leading-none">+</span>
+                </span>
+            </div>
+        </button>
+                    <div class="accordion-content">
+                        <div class="overflow-hidden">
+                            <div class="px-9 pb-8 text-gray-500 text-[17px] leading-relaxed">
+                                Typically, the process takes 4 to 12 weeks depending on the country and your specific visa category. We ensure all documents are perfect to avoid delays.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="700" class="accordion-item border border-gray-200 rounded-[35px] bg-white overflow-hidden transition-all duration-500 hover:border-blue-200">
+                    <button class="cursor-pointer w-full flex items-center justify-between py-5 px-8 text-left focus:outline-none" onclick="toggleAccordion(this)">
+            <span class="font-inter text-lg font-semibold text-[#1a1a1a]">Do you offer scholarship assistance?</span>
+            <div class="relative w-11 h-11 flex items-center justify-center rounded-full border border-gray-100 bg-[#f8fafd] icon-bg-effect shrink-0">
+                <span class=" inline-block transition-transform duration-700 ease-in-out">
+                    <span class="icon text-2xl font-light text-gray-700 leading-none">+</span>
+                </span>
+            </div>
+        </button>
+                    <div class="accordion-content">
+                        <div class="overflow-hidden">
+                            <div class="px-9 pb-8 text-gray-500 text-[17px] leading-relaxed">
+                                Yes, we help students identify and apply for fully-funded and partial scholarships based on their academic merits and profiles.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="700" class="accordion-item border border-gray-200 rounded-[35px] bg-white overflow-hidden transition-all duration-500 hover:border-blue-200">
+                    <button class="cursor-pointer w-full flex items-center justify-between py-5 px-8 text-left focus:outline-none" onclick="toggleAccordion(this)">
+            <span class=" text-lg font-semibold text-[#1a1a1a]">Which countries can I apply for?</span>
+            <div class="relative w-11 h-11 flex items-center justify-center rounded-full border border-gray-100 bg-[#f8fafd] icon-bg-effect shrink-0">
+                <span class=" inline-block transition-transform duration-700 ease-in-out">
+                    <span class="icon text-2xl font-light text-gray-700 leading-none">+</span>
+                </span>
+            </div>
+        </button>
+                    <div class="accordion-content">
+                        <div class="overflow-hidden">
+                            <div class="px-9 pb-8 text-gray-500 text-[17px] leading-relaxed">
+                                Currently, we specialize in admissions for the USA, UK, Canada, Australia, and various countries within the Schengen area.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="700" class="accordion-item border border-gray-200 rounded-[35px] bg-white overflow-hidden transition-all duration-500 hover:border-blue-200">
+                    <button class="cursor-pointer w-full flex items-center justify-between py-5 px-8 text-left focus:outline-none" onclick="toggleAccordion(this)">
+            <span class=" text-lg font-semibold text-[#1a1a1a]">Is IELTS mandatory for all universities?</span>
+            <div class="relative w-11 h-11 flex items-center justify-center rounded-full border border-gray-100 bg-[#f8fafd] icon-bg-effect shrink-0">
+                <span class=" inline-block transition-transform duration-700 ease-in-out">
+                    <span class="icon text-2xl font-light text-gray-700 leading-none">+</span>
+                </span>
+            </div>
+        </button>
+                    <div class="accordion-content">
+                        <div class="overflow-hidden">
+                            <div class="px-9 pb-8 text-gray-500 text-[17px] leading-relaxed">
+                                Not always. Many universities accept Duolingo, MOI (Medium of Instruction), or internal tests, though IELTS is the most widely recognized.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <style>
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .accordion-item.active .accordion-content {
+            grid-template-rows: 1fr;
+        }
+        
+        .accordion-item.active .icon-wrapper {
+            transform: rotate(360deg);
+        }
+        
+        .icon-bg-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, #e2e8f0 0%, transparent 70%);
+            border-radius: 9999px;
+            opacity: 0.6;
+        }
+        
+        .accordion-item.active {
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.04);
+            border-color: #e2e8f0;
+        }
+        
+        .icon-bg-container {
+            background-color: transparent;
+        }
+        
+        .accordion-item.active .icon-bg-container {
+            background-color: #f0f7ff;
+        }
+        
+        .accordion-item.active .icon-wrapper {
+            transform: rotate(390deg);
+        }
+        
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .accordion-item.active .accordion-content {
+            grid-template-rows: 1fr;
+        }
+    </style>
+
+    <script>
+        function toggleAccordion(button) {
+            const currentItem = button.parentElement;
+            const isOpen = currentItem.classList.contains('active');
+
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.icon').innerText = '+';
+            });
+
+            if (!isOpen) {
+                currentItem.classList.add('active');
+                currentItem.querySelector('.icon').innerText = '−';
+            }
+        }
+    </script>
     <!-- Footer -->
     <div data-include="components/footer.html "></div>
 
