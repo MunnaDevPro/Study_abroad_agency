@@ -66,15 +66,255 @@
             color: var(--color-desc);
             line-height: var(--line-height-normal);
         }
+        
+        html,
+        body {
+            overflow-x: hidden;
+        }
     </style>
 
 </head>
 
 <body>
 
-    <!-- Header -->
-    <div data-include="components/navbar.html"></div>
+    <!-- navbar -->
+    <style>
+         :root {
+            --primary-color: #1E88E5;
+            --secondary-color: #42A5F5;
+            --accent-color: #FF9800;
+            --dark-color: #1e293b;
+        }
+        /* Modern Button Hover Effect */
+        
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+            background: white;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transition: left 0.5s ease;
+            z-index: 0;
+        }
+        
+        .cta-button:hover::before {
+            left: 0;
+        }
+        
+        .cta-button span,
+        .cta-button .icon-wrapper {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover span,
+        .cta-button:hover .icon-wrapper svg {
+            color: white;
+        }
+        
+        .icon-wrapper {
+            background: rgba(30, 136, 229, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover .icon-wrapper {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(4px);
+        }
+        
+        .nav-link-custom {
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            color: #4b5563;
+            font-weight: 500;
+        }
+        
+        .nav-link-custom::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+        
+        .nav-link-custom:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link-custom:hover::after {
+            width: 100%;
+        }
+        
+        .dropdown-menu-simple {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: white;
+            min-width: 180px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            z-index: 100;
+            border: 1px solid #f1f5f9;
+        }
+        
+        .group:hover .dropdown-menu-simple {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        .dropdown-item-nudge {
+            display: block;
+            padding: 10px 20px;
+            color: #374151;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item-nudge:hover {
+            padding-left: 26px;
+            color: var(--primary-color);
+            background-color: #f8fafc;
+        }
+        
+        .logo-globe {
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .glass-navbar {
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 
+    <nav class="glass-navbar bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-18">
+                <!-- company logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="relative w-auto h-14 flex items-center justify-center transition-transform overflow-hidden">
+                            <img src="/assets/images/company_logo/helpline_logo.png" alt="Logo" class="w-auto h-full">
+
+                        </div>
+
+
+                    </a>
+                </div>
+
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 text-gray-400">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html" class="nav-link-custom">About</a>
+
+                        <div class="relative group">
+                            <button class="nav-link-custom flex items-center gap-1.5 focus:outline-none">
+                            <span>Study Abroad</span>
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                            <div class="dropdown-menu-simple">
+                                <a href="#" class="dropdown-item-nudge">USA</a>
+                                <a href="#" class="dropdown-item-nudge">Canada</a>
+                                <a href="#" class="dropdown-item-nudge">UK</a>
+                                <a href="#" class="dropdown-item-nudge">Australia</a>
+                            </div>
+                        </div>
+
+                        <a href="services.html" class="nav-link-custom">Service </a>
+                        <a href="about.html" class="nav-link-custom">Success Story</a>
+                        <a href="contact.html" class="nav-link-custom">Blog</a>
+                        <a href="contact.html" class="nav-link-custom">Contact</a>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center flex-shrink-0 group">
+                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold">
+                        <span>Consultation</span>
+                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
+                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                        </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-gray-600">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                mobileMenu.classList.toggle('active');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
 
 
 
@@ -199,6 +439,41 @@
                 transform: translateY(0);
             }
         }
+        /* why choose us er style */
+        
+        .custom-line-left {
+            height: 2px;
+            width: 100px;
+            background: linear-gradient(to left, var(--accent-color), transparent);
+            position: relative;
+        }
+        
+        .custom-line-left::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 8px solid var(--accent-color);
+        }
+        
+        .custom-line-right {
+            height: 2px;
+            width: 100px;
+            background: linear-gradient(to right, var(--accent-color), transparent);
+            position: relative;
+        }
+        
+        .custom-line-right::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -4px;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid var(--accent-color);
+        }
     </style>
     <div class="w-full bg-white py-16">
 
@@ -240,7 +515,15 @@
                 </div>
 
                 <div class="w-full lg:w-1/2">
-                    <h5 data-aos="fade-left" data-aos-duration="700" class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-1">Why Choose Us</h5>
+                    <div data-aos="fade-left" data-aos-duration="700" class="flex items-center space-x-4 mb-2">
+                        <div class="custom-line-left"></div>
+
+                        <h5 class="hero-desc  font-bold uppercase tracking-widest text-sm px-4 py-1 border border-gray-100 rounded-full bg-white">
+                            Why Choose Us
+                        </h5>
+
+                        <div class="custom-line-right"></div>
+                    </div>
                     <h1 data-aos="fade-left" data-aos-duration="700" style="font-family: var(--font-heading);" class=" text-2xl md:text-4xl lg:text-4xl mb-4">
                         <span class="text-[var(--primary-color)] hero-text">Your Immigration</span> for Success Partner
                     </h1>
@@ -251,10 +534,10 @@
 
                     <div data-aos="fade-left" data-aos-duration="700" class="w-full">
                         <div class="flex items-center gap-4 mb-6">
-                            <button id="btn-mission" onclick="showTab('mission')" class="cursor-pointer px-6 py-2 font-bold border border-gray-200 text-white bg-[var(--primary-color)] rounded-full shadow-lg transition-all duration-300 text-lg">
+                            <button id="btn-mission" onclick="showTab('mission')" class="cursor-pointer px-6 py-2 font-semibold border border-gray-200 text-white bg-[var(--primary-color)] rounded-full  transition-all duration-300 text-md">
                 Our Mission
             </button>
-                            <button id="btn-vision" onclick="showTab('vision')" class="cursor-pointer border border-gray-200 px-6 py-2 font-bold text-gray-600 bg-transparent rounded-full transition-all duration-300 text-lg">
+                            <button id="btn-vision" onclick="showTab('vision')" class="cursor-pointer border border-gray-200 px-6 py-2 font-semibold text-gray-600 bg-transparent rounded-full transition-all duration-300 text-md">
                 Our Vision
             </button>
                         </div>
@@ -347,7 +630,6 @@
 
 
     <!-- Study Destination -->
-
     <section class="relative mt-6 py-8">
 
         <div data-aos="zoom-in-up" data-aos-duration="900" class="max-w-3xl mx-auto mb-10 px-6">
@@ -415,6 +697,8 @@
     </section>
 
 
+
+
     <!-- top university -->
     <style>
         .carousel-container {
@@ -472,7 +756,16 @@
         <!-- Header Section -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-                <h5 data-aos="fade-right" data-aos-duration="700" class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-1">PARTNER UNIVERSITIES</h5>
+                <div data-aos="fade-left" data-aos-duration="700" class="flex items-center space-x-4 mb-2">
+                    <div class="custom-line-left"></div>
+
+                    <h5 class="hero-desc  font-bold uppercase tracking-widest text-sm px-4 py-1 border border-gray-100 rounded-full bg-white">
+                        PARTNER UNIVERSITIES
+                    </h5>
+
+                    <div class="custom-line-right"></div>
+                </div>
+                <!-- <h5 data-aos="fade-right" data-aos-duration="700" class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-1">PARTNER UNIVERSITIES</h5> -->
                 <h2 data-aos="fade-right" data-aos-duration="700" class="hero-title text-3xl md:text-3xl font-bold text-gray-900 mb-1">
                     Our <span class="text-gray-900">Global University Partners</span>
                 </h2>
@@ -508,10 +801,11 @@
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
                                     University of Columbia
                                 </h3>
+                                <a href="https://www.columbia.edu/" target="_blank">
+                                    <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+                                    New York, Columbia
+                                </span> </a>
 
-                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
-            Edmonton, Columbia
-        </span>
                             </div>
                         </div>
                     </div>
@@ -533,10 +827,10 @@
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
                                     University of Hardvard
                                 </h3>
-
-                                <span class=" cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
-            Edmonton, Canada
-        </span>
+                                <a href="https://www.harvard.edu/" target="_blank">
+                                    <span class=" cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+                                    Cambridge USA
+                                </span></a>
                             </div>
                         </div>
                     </div>
@@ -558,10 +852,10 @@
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
                                     University of Alberta
                                 </h3>
-
-                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
-            Edmonton, Canada
-        </span>
+                                <a href="https://www.ualberta.ca/en/index.html" target="_blank">
+                                    <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+                                    Edmonton, Canada
+                                </span></a>
                             </div>
                         </div>
                     </div>
@@ -583,16 +877,67 @@
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
                                     University of Alberta
                                 </h3>
-
-                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
-            Edmonton, Canada
-        </span>
+                                <a href="https://www.future.uwindsor.ca/" target="_blank">
+                                    <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+             Windsor, Canada
+        </span></a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
+                    <!-- Slide 1 -->
+                    <div data-aos="fade-up" data-aos-duration="600" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/columbia.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Columbia
+                                </h3>
+                                <a href="https://www.columbia.edu/" target="_blank">
+                                    <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+                                    New York, Columbia
+                                </span> </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div data-aos="fade-up" data-aos-duration="800" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/hardvard.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Hardvard
+                                </h3>
+                                <a href="https://www.harvard.edu/" target="_blank">
+                                    <span class=" cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+                                    Cambridge USA
+                                </span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div data-aos="fade-up" data-aos-duration="1000" class="carousel-slide">
                         <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
 
                             <div class="relative z-10">
@@ -608,13 +953,42 @@
                                 <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
                                     University of Alberta
                                 </h3>
-
-                                <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
-            Edmonton, Canada
-        </span>
+                                <a href="https://www.ualberta.ca/en/index.html" target="_blank">
+                                    <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+                                    Edmonton, Canada
+                                </span></a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Slide 4 -->
+                    <div data-aos="fade-up" data-aos-duration="1200" class="carousel-slide">
+                        <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
+
+                            <div class="relative z-10">
+                                <div class="relative w-36 h-36 mx-auto mb-6 flex items-center justify-center rounded-full p-[3px] overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#1e40af_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-opacity duration-500" style="animation-duration: 2s;"></div>
+
+                                    <div class="relative w-full h-full bg-white rounded-full flex items-center justify-center z-10 border border-gray-100">
+                                        <img src="/assets/images/university_logo/windsor.png" alt="University of Alberta" class="w-24 h-24 object-cover transition-transform duration-700 group-hover:scale-110">
+                                    </div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-blue-800 transition-colors duration-500">
+                                    University of Alberta
+                                </h3>
+                                <a href="https://www.future.uwindsor.ca/" target="_blank">
+                                    <span class="cursor-pointer font-inter inline-block px-6 py-2 bg-gray-100 rounded-full text-gray-600 font-semibold text-sm group-hover:bg-gray-700 group-hover:text-white transition-all duration-500">
+             Windsor, Canada
+        </span></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
 
@@ -747,6 +1121,9 @@
         updateCarousel();
     </script>
 
+
+
+
     <!-- our service -->
     <style>
         @media (max-width: 768px) {
@@ -761,7 +1138,7 @@
         <div class="container max-w-7xl  mx-auto px-6 lg:px-12 py-16 rounded-2xl bg-gray-50">
             <div data-aos="zoom-in-up" data-aos-duration="900" class="text-center mb-16 ">
                 <h1 class="hero-title  md:text-6xl font-bold mb-6">
-                    OUR SERVICES
+                    Our Services
                 </h1>
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto hero-desc">
                     Complete Study Abroad Service Pack (All-in-One) At Helpline Global Education Consultant, we provide end-to-end study abroad solutions — from career planning to successful departure.
@@ -969,10 +1346,101 @@
     </section>
 
 
+    <!-- who we are -->
+    <section class="py-16 px-6 md:px-12 lg:px-24 bg-white font-sans overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div class="relative w-full h-[500px] md:h-[600px] flex items-center">
+
+                <div class="absolute top-0 right-10 w-32 h-32 opacity-20 pointer-events-none z-0">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gray-400 stroke-current fill-none">
+                <path d="M0,80 Q30,70 50,40 T100,20" stroke-dasharray="4 4" />
+                <path d="M95,15 L100,20 L95,25" />
+                </svg>
+                </div>
+
+                <div class="absolute left-0 top-12 w-[38%] h-[80%] z-10">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-[1.5px] border-red-500 rounded-[2.5rem]"></div>
+                    <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden border-[6px] border-white shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600" alt="Man with passport" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="absolute left-[26%] top-6 w-[38%] h-[80%] z-20">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-[1.5px] border-red-500 rounded-[2.5rem]"></div>
+                    <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden border-[6px] border-white shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=600" alt="Woman traveling" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="absolute right-0 bottom-4 w-[45%] h-[85%] z-30">
+                    <div class="w-full h-full rounded-[2.5rem] rounded-tr-[6rem] overflow-hidden border-[6px] border-white shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600" alt="Group consultation" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
 
 
 
+            <div class="flex flex-col gap-6">
+                <div data-aos="fade-left" data-aos-duration="700" class="flex items-center space-x-4 mb-2">
+                    <div class="custom-line-left"></div>
 
+                    <h5 class="hero-desc  font-bold uppercase tracking-widest text-sm px-4 py-1 border border-gray-100 rounded-full bg-white">
+                        Who We Are
+                    </h5>
+
+                    <div class="custom-line-right"></div>
+                </div>
+
+                <h2 class="hero-title text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none">
+                    <span class="text-[var(--primary-color)]">Trusted Guidance</span> for Every Visa Jouney
+                </h2>
+
+                <p class="hero-desc text-lg ">
+                    We Provide Expert Guidance For Every Visa Application, Ensuring Smooth Processing, Personalized Support, And Reliable Assistance To Make Your Travel Experience Seamless And Stress-Free."
+                </p>
+
+                <div class="flex flex-wrap items-center gap-10 py-4">
+                    <div class="flex flex-col">
+                        <div class="text-8xl font-black text-transparent bg-clip-text bg-center bg-cover" style="background-image: url('/assets/images/water_mark_photo.jpg'); -webkit-text-stroke: 1px #e2e8f0;">
+                            20+
+                        </div>
+                        <span class="font-bold text-slate-800 -mt-2">Years Of Experience</span>
+                    </div>
+
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 font-bold text-slate-800">
+                            <span class="text-blue-600 text-xl">≫</span> Experienced Visa Consultants
+                        </li>
+                        <li class="flex items-center gap-3 font-bold text-slate-800">
+                            <span class="text-blue-600 text-xl">≫</span> Fast & Reliable Processing
+                        </li>
+                        <li class="flex items-center gap-3 font-bold text-slate-800">
+                            <span class="text-blue-600 text-xl">≫</span> Personalized Travel Assistance
+                        </li>
+                        <li class="flex items-center gap-3 font-bold text-slate-800">
+                            <span class="text-blue-600 text-xl">≫</span> Global Reach And Support
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-4">
+                    <a href="#" class="inline-flex items-center gap-6 pl-8 pr-2 py-2 bg-gray-50 border border-gray-200 rounded-full group hover:bg-white transition-all">
+                        <span class="font-bold text-gray-500 tracking-tight">Our Support Team
+                        </span>
+                        <div class="bg-red-500 text-white w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-red-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Footer -->
     <div data-include="components/footer.html "></div>
@@ -985,10 +1453,12 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+
     <!-- aos cdn js link -->
     <script>
         AOS.init();
     </script>
 </body>
 
-</htmlb5up </htmlb5up
+</html>
