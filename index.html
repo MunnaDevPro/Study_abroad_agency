@@ -735,6 +735,10 @@
     </script>
 
 
+    <!-- start -->
+
+
+
     <!-- hero section -->
     <style>
         .dot-pattern {
@@ -1048,7 +1052,219 @@
     </section>
 
 
+    <!-- star section -->
+    <section class="py-12  lg:mt-10">
+        <div class="max-w-7xl mx-auto bg-gray-700 px-4 sm:px-6 lg:px-8 text-center rounded-4xl pt-16 pb-18">
+            <h2 data-aos="zoom-in-down" data-aos-duration="700" class="hero-title  font-extrabold text-center text-gray-900 mb-12">
+                <span class="text-[var(--primary-color)]">Study Abroad</span> <span class="text-gray-50">Successfully</span> <br class="hidden sm:block" />
+            </h2>
 
+            <div data-aos="zoom-in-down" data-aos-duration="700" class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                <div class="border border-gray-200 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center transition duration-300 hover:shadow-md">
+                    <div class="p-3 mb-4 rounded-xl bg-[var(--primary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l10 5L12 19 2 7l10-5zM2 7l10 5m0 0l10-5m-10 5v12" />
+                    </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900 mb-1" data-counter="student-helped">0</p>
+                    <p class="text-gray-600 text-sm">Students Helped</p>
+                </div>
+
+                <div class="border border-gray-200 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center transition duration-300 hover:shadow-md">
+                    <div class="p-3 mb-4 rounded-xl bg-[var(--primary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900 mb-1" data-counter="global-program">0</p>
+                    <p class="text-gray-600 text-sm">Global Programs</p>
+                </div>
+
+                <div class="border border-gray-200 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center transition duration-300 hover:shadow-md">
+                    <div class="p-3 mb-4 rounded-xl bg-[var(--primary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 22h18M3 10l9-7 9 7M9 22V12h6v10" />
+                    </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900 mb-1" data-counter="institution-global">0</p>
+                    <p class="text-gray-600 text-sm">Institutions Globally</p>
+                </div>
+
+                <div class="border border-gray-200 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center transition duration-300 hover:shadow-md">
+                    <div class="p-3 mb-4 rounded-xl bg-[var(--primary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7" />
+                    </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900 mb-1" data-counter="nationalities">0</p>
+                    <p class="text-gray-600 text-sm">Nationalities</p>
+                </div>
+
+                <div class="border border-gray-200 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center transition duration-300 hover:shadow-md">
+                    <div class="p-3 mb-4 rounded-xl bg-[var(--primary-color)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="7" r="4" />
+                        <path d="M3.28 21.32A10 10 0 0 1 12 17c2.81 0 5.37 1.05 7.72 4.32" />
+                    </svg>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900 mb-1" data-counter="experience">0</p>
+                    <p class="text-gray-600 text-sm">Years of Expertise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Manual Data - Apni ekhane icche moto number boshiye din
+        const manualData = {
+            studentHelped: "1.5M", // Million bujhate 'M' use korun
+            globalProgram: "150000", // Total numbers
+            institutionGlobal: "2500",
+            nationalities: "120",
+            experience: "15"
+        };
+
+        function parseValue(value, isMillions = false) {
+            const cleaned = value.toString().replace(/[^0-9.]/g, '');
+            const parsed = parseFloat(cleaned) || 0;
+
+            if (isMillions || value.toString().toUpperCase().includes('M')) {
+                return parsed * 1000000;
+            }
+            if (value.toString().toUpperCase().includes('K')) {
+                return parsed * 1000;
+            }
+            return parsed;
+        }
+
+        const targetValues = {
+            'student-helped': parseValue(manualData.studentHelped),
+            'global-program': parseValue(manualData.globalProgram),
+            'institution-global': parseValue(manualData.institutionGlobal),
+            'nationalities': parseValue(manualData.nationalities),
+            'experience': parseValue(manualData.experience)
+        };
+
+        function formatNumber(value, key) {
+            const target = targetValues[key];
+            if (key === 'student-helped') {
+                let millionValue = (value / 1000000).toFixed(1);
+                return millionValue + 'M+';
+            } else if (key === 'global-program' || key === 'institution-global') {
+                return Math.floor(value).toLocaleString('en-US') + '+';
+            } else {
+                return Math.floor(value) + '+';
+            }
+        }
+
+        function countUp(element, target, key) {
+            const duration = 2000;
+            let start = 0;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                if (elapsedTime < duration) {
+                    start = (elapsedTime / duration) * target;
+                    element.textContent = formatNumber(start, key);
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = formatNumber(target, key);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counterElement = entry.target;
+                    const key = counterElement.getAttribute('data-counter');
+                    countUp(counterElement, targetValues[key], key);
+                    observer.unobserve(counterElement);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('[data-counter]').forEach(el => observer.observe(el));
+    </script>
+
+
+    <!-- award section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div data-aos="zoom-in-down" data-aos-duration="700" class="group flex flex-col items-center text-center cursor-pointer">
+                    <div class="w-32 h-32 mb-6 [perspective:1000px]">
+                        <div class="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
+                                <img src="assets/images/award/icon-1.png" alt="Visa Icon" class="w-24 h-24 object-contain grayscale opacity-80 group-hover:grayscale-0 transition-all">
+                            </div>
+
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                                <img src="assets/images/award/icon-1.png" alt="Visa Icon" class="w-24 h-24 object-contain opacity-40">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[var(--primary-color)] duration-300">Visa Consultancy</h3>
+                    <p class="text-[var(--primary-color)] group-hover:text-gray-600 duration-300 font-semibold">2025</p>
+                </div>
+
+                <div data-aos="zoom-in-down" data-aos-duration="700" class="group flex flex-col items-center text-center cursor-pointer">
+                    <div class="w-32 h-32 mb-6 [perspective:1000px]">
+                        <div class="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
+                                <img src="assets/images/award/icon-2.png" alt="Success Award" class="w-24 h-24 object-contain grayscale opacity-80 group-hover:grayscale-0 transition-all">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                                <img src="assets/images/award/icon-2.png" alt="Success Award" class="w-24 h-24 object-contain opacity-40">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[var(--primary-color)] duration-300">Visa Success Award</h3>
+                    <p class="text-[var(--primary-color)] group-hover:text-gray-600 duration-300 font-semibold">2025</p>
+                </div>
+
+                <div data-aos="zoom-in-down" data-aos-duration="700" class="group flex flex-col items-center text-center cursor-pointer">
+                    <div class="w-32 h-32 mb-6 [perspective:1000px]">
+                        <div class="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
+                                <img src="assets/images/award/icon-3.png" alt="Innovation Award" class="w-24 h-24 object-contain grayscale opacity-80 group-hover:grayscale-0 transition-all">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                                <img src="assets/images/award/icon-3.png" alt="Innovation Award" class="w-24 h-24 object-contain opacity-40">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[var(--primary-color)] duration-300">Innovation Award</h3>
+                    <p class="text-[var(--primary-color)] group-hover:text-gray-600 duration-300 font-semibold">2025</p>
+                </div>
+
+                <div data-aos="zoom-in-down" data-aos-duration="700" class="group flex flex-col items-center text-center cursor-pointer">
+                    <div class="w-32 h-32 mb-6 [perspective:1000px]">
+                        <div class="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
+                                <img src="assets/images/award/icon-4.png" alt="Education Award" class="w-24 h-24 object-contain grayscale opacity-80 group-hover:grayscale-0 transition-all">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                                <img src="assets/images/award/icon-4.png" alt="Education Award" class="w-24 h-24 object-contain opacity-40">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-1 group-hover:text-[var(--primary-color)] duration-300">Global Education Partner</h3>
+                    <p class="text-[var(--primary-color)] group-hover:text-gray-600 duration-300 font-semibold">2025</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- why choose us -->
     <style>
@@ -1367,41 +1583,7 @@
 
                 <p data-aos="fade-right" data-aos-duration="700" class="text-gray-600 hero-desc">We collaborate with reputed universities and institutions worldwide to ensure globally recognized education</p>
             </div>
-
         </div>
-
-        <!-- Filter Section -->
-        <div class="container max-w-7xl mx-auto px-6 lg:px-12 mb-8">
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-4">
-                <div class="flex flex-wrap gap-3 justify-center items-center">
-                    <button onclick="filterByCountry('all', event)" class="filter-btn active px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-700 text-white hover:bg-gray-800 cursor-pointer">
-                All Universities
-            </button>
-                    <button onclick="filterByCountry('usa', event)" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-600 hover:bg-gray-700 hover:text-white cursor-pointer">
-                USA
-            </button>
-                    <button onclick="filterByCountry('canada', event)" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 bg-gray-100 text-gray-600 hover:bg-gray-700 hover:text-white cursor-pointer">
-                Canada
-            </button>
-                </div>
-            </div>
-        </div>
-
-        <style>
-            .filter-btn.active {
-                background-color: #374151;
-                color: white;
-            }
-            
-            .carousel-slide {
-                transition: opacity 0.5s ease, transform 0.5s ease;
-            }
-            
-            .carousel-slide.hidden-slide {
-                display: none;
-            }
-        </style>
-
 
         <div class="relative">
             <!-- Left Navigation Button -->
@@ -1592,7 +1774,7 @@
                     </div>
 
                     <!-- Slide 4 -->
-                    <!-- <div data-aos="fade-up" data-aos-duration="1200" class="carousel-slide">
+                    <div data-aos="fade-up" data-aos-duration="1200" class="carousel-slide">
                         <div class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-700 hover:-translate-y-3 hover:scale-101 text-center relative overflow-hidden">
 
                             <div class="relative z-10">
@@ -1614,7 +1796,7 @@
         </span></a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
 
 
@@ -1640,11 +1822,12 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const dotsContainer = document.getElementById('dotsContainer');
-        const allSlides = Array.from(document.querySelectorAll('.carousel-slide'));
+        const slides = document.querySelectorAll('.carousel-slide');
 
         let currentIndex = 0;
         let slidesPerView = getSlidesPerView();
-        let currentVisibleSlides = allSlides;
+        const totalSlides = slides.length;
+        const maxIndex = totalSlides - slidesPerView;
 
         function getSlidesPerView() {
             const width = window.innerWidth;
@@ -1653,107 +1836,45 @@
             return 1;
         }
 
-        // Initialize Slide Countries
-        function initializeSlideCountries() {
-            // Example dynamic assignment based on content or manually
-            const slideData = ['usa', 'usa', 'canada', 'canada', 'usa', 'usa', 'canada'];
-            allSlides.forEach((slide, index) => {
-                if (slideData[index]) slide.setAttribute('data-country', slideData[index]);
-            });
-        }
-
-        function filterByCountry(country, event) {
-            // Update active button UI
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach(btn => {
-                btn.classList.remove('active', 'bg-gray-700', 'text-white');
-                btn.classList.add('bg-gray-100', 'text-gray-600');
-            });
-            event.currentTarget.classList.add('active', 'bg-gray-700', 'text-white');
-
-            // Filter slides
-            allSlides.forEach(slide => {
-                if (country === 'all' || slide.getAttribute('data-country') === country) {
-                    slide.style.display = 'block';
-                    slide.classList.remove('hidden-slide');
-                } else {
-                    slide.style.display = 'none';
-                    slide.classList.add('hidden-slide');
-                }
-            });
-
-            // Update current visible slides list
-            currentVisibleSlides = allSlides.filter(slide => !slide.classList.contains('hidden-slide'));
-
-            // Reset position
-            currentIndex = 0;
-            updateCarousel();
-            createDots();
-        }
-
         function createDots() {
             dotsContainer.innerHTML = '';
-            const maxIndex = Math.max(0, currentVisibleSlides.length - slidesPerView);
-
-            // If no scrolling needed, don't show dots
-            if (maxIndex <= 0) return;
-
+            const dotsCount = maxIndex + 1;
             for (let i = 0; i <= maxIndex; i++) {
                 const dot = document.createElement('button');
-                dot.className = `w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${i === currentIndex ? 'bg-gray-600 w-8' : 'bg-gray-300'}`;
-                dot.onclick = () => goToSlide(i);
+                dot.className = 'w-3 h-3 rounded-full transition-all duration-300 ' +
+                    (i === currentIndex ? 'bg-gray-600 w-8' : 'bg-gray-300');
+                dot.addEventListener('click', () => goToSlide(i));
                 dotsContainer.appendChild(dot);
             }
         }
 
         function updateCarousel() {
-            const maxIndex = Math.max(0, currentVisibleSlides.length - slidesPerView);
-
-            // Safety check for index
-            if (currentIndex > maxIndex) currentIndex = maxIndex;
-            if (currentIndex < 0) currentIndex = 0;
-
             const slideWidth = 100 / slidesPerView;
             track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            updateButtons();
+            updateDots();
+        }
 
-            // Update Buttons state
+        function updateButtons() {
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex >= maxIndex;
-
-            // Hide/Show nav if not enough slides
-            const navNeeded = currentVisibleSlides.length > slidesPerView;
-            prevBtn.style.display = navNeeded ? 'block' : 'none';
-            nextBtn.style.display = navNeeded ? 'block' : 'none';
-
-            updateDots();
         }
 
         function updateDots() {
             const dots = dotsContainer.querySelectorAll('button');
             dots.forEach((dot, index) => {
                 if (index === currentIndex) {
-                    dot.classList.add('bg-gray-600', 'w-8');
-                    dot.classList.remove('bg-gray-300');
+                    dot.className = 'w-3 h-3 rounded-full transition-all duration-300 bg-gray-600 w-8';
                 } else {
-                    dot.classList.remove('bg-gray-600', 'w-8');
-                    dot.classList.add('bg-gray-300');
+                    dot.className = 'w-3 h-3 rounded-full transition-all duration-300 bg-gray-300';
                 }
             });
         }
 
         function goToSlide(index) {
-            currentIndex = index;
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
             updateCarousel();
         }
-
-        // Event Listeners
-        nextBtn.addEventListener('click', () => {
-            const maxIndex = Math.max(0, currentVisibleSlides.length - slidesPerView);
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
 
         prevBtn.addEventListener('click', () => {
             if (currentIndex > 0) {
@@ -1762,19 +1883,54 @@
             }
         });
 
-        window.addEventListener('resize', () => {
-            slidesPerView = getSlidesPerView();
-            updateCarousel();
-            createDots();
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
         });
 
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeSlideCountries();
-            currentVisibleSlides = allSlides;
-            createDots();
-            updateCarousel();
+        window.addEventListener('resize', () => {
+            const newSlidesPerView = getSlidesPerView();
+            if (newSlidesPerView !== slidesPerView) {
+                slidesPerView = newSlidesPerView;
+                currentIndex = Math.min(currentIndex, totalSlides - slidesPerView);
+                createDots();
+                updateCarousel();
+            }
         });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchStartX - touchEndX > 50) {
+                nextBtn.click();
+            }
+            if (touchEndX - touchStartX > 50) {
+                prevBtn.click();
+            }
+        }
+
+        // Initialize
+        createDots();
+        updateCarousel();
     </script>
 
 
@@ -2140,6 +2296,8 @@
             </div>
         </div>
     </section>
+
+    <!-- why choose our service pack -->
 
 
 
@@ -2557,6 +2715,79 @@
 
         </div>
     </section>
+
+
+    <!-- why choose our service pack -->
+    <section class="bg-white py-12 font-sans text-gray-800">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-10 border-b border-gray-100 pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold mb-6 tracking-tight">Why Choose Our Service Pack?</h2>
+                    <ul class="space-y-1">
+                        <li class="hero-desc flex items-center gap-3">
+                            <span class=" text-[var(--primary-color)] font-bold">✓</span> Complete End-to-End Support
+                        </li>
+                        <li class="hero-desc flex items-center gap-3">
+                            <span class="text-[var(--primary-color)] font-bold">✓</span> Experienced Counselors
+                        </li>
+                        <li class="hero-desc flex items-center gap-3">
+                            <span class="text-[var(--primary-color)] font-bold">✓</span> Transparent & Ethical Process
+                        </li>
+                        <li class="hero-desc flex items-center gap-3">
+                            <span class="text-[var(--primary-color)] font-bold">✓</span> High Visa Success Rate
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col justify-center items-start md:items-center border-l-0 md:border-l border-gray-100 md:pl-16">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Contact Us</span>
+                    <h3 class="text-xl font-semibold mb-1">Book Free Consultation</h3>
+                    <p class="text-gray-500 mb-6 italic">Talk to an Expert Counselor</p>
+                    <button class="bg-[var(--primary-color)] text-white px-8 py-3 text-sm font-bold uppercase hover:bg-[var(--primary-color)] rounded-4xl transition-colors">
+                    Get Started
+                </button>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="mb-10 text-center">
+                    <h2 class="text-2xl font-bold uppercase tracking-widest font-inter">Our Process</h2>
+                    <p class="text-gray-500 text-sm mt-1">Your Study Abroad Journey</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+                    <div class="border rounded-md border-gray-200 p-5 text-center transition-colors hover:border-[var(--primary-color)] group">
+                        <span class="block text-gray-300 font-bold mb-2 group-hover:border-[var(--primary-color)] duration-400">01</span>
+                        <p class="text-sm font-bold text-gray-600">Free Counseling</p>
+                    </div>
+                    <div class="border rounded-md border-gray-200 p-5 text-center transition-colors hover:border-[var(--primary-color)] group">
+                        <span class="block text-gray-300 font-bold mb-2 group-hover:border-[var(--primary-color)] duration-400">02</span>
+                        <p class="text-sm font-bold text-gray-600">University Selection</p>
+                    </div>
+                    <div class="border rounded-md border-gray-200 p-5 text-center transition-colors hover:border-[var(--primary-color)] group">
+                        <span class="block text-gray-300 font-bold mb-2 group-hover:border-[var(--primary-color)] duration-400">03</span>
+                        <p class="text-sm font-bold text-gray-600">Application Submission</p>
+                    </div>
+                    <div class="border rounded-md border-gray-200 p-5 text-center transition-colors hover:border-[var(--primary-color)] group">
+                        <span class="block text-gray-300 font-bold mb-2 group-hover:border-[var(--primary-color)] duration-400">04</span>
+                        <p class="text-sm font-bold text-gray-600">Offer Letter</p>
+                    </div>
+                    <div class="border rounded-md border-gray-200 p-5 text-center transition-colors hover:border-[var(--primary-color)] group">
+                        <span class="block text-gray-300 font-bold mb-2 group-hover:border-[var(--primary-color)] duration-400">05</span>
+                        <p class="text-sm font-bold text-gray-600">Visa Processing</p>
+                    </div>
+                    <div class="border rounded-md border-gray-200 p-5 text-center transition-colors hover:border-[var(--primary-color)] group">
+                        <span class="block text-gray-300 font-bold mb-2 group-hover:border-[var(--primary-color)] duration-400">06</span>
+                        <p class="text-sm font-bold text-gray-600">Departure Support</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
 
     <!-- blog section  -->
     <section class="py-16 px-6 md:px-12 lg:px-14 ">
@@ -3132,7 +3363,6 @@
         </div>
     </footer>
 
-
     <!-- video open modal -->
     <div id="videoModal" class="fixed inset-0 z-[999] hidden flex items-center justify-center bg-black/90 p-4 transition-opacity duration-300">
 
@@ -3196,4 +3426,4 @@
     </script>
 </body>
 
-</html>j
+</html>
