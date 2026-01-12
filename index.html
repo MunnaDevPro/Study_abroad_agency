@@ -716,10 +716,7 @@
     </script>
 
 
-    <!-- start -->
-
-
-
+    <!-- navbar -->
     <!-- hero section -->
     <section style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; overflow: hidden;">
         <style>
@@ -727,17 +724,16 @@
                 background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
                 padding: 80px 20px 0;
                 position: relative;
-                min-height: 700px;
+                min-height: 600px;
             }
-            
-            .container {
+            /* .container {
                 max-width: 1200px;
                 margin: 0 auto;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 gap: 50px;
-            }
+            } */
             
             .hero-content {
                 flex: 1;
@@ -892,10 +888,8 @@
             
             .partner-banner {
                 padding: 20px 0;
-                margin-top: -160px;
-                transform: rotate(1deg);
-                position: relative;
-                overflow: hidden;
+                margin-top: -120px;
+                transform: rotate(3.5deg);
             }
             
             .partner-strip {
@@ -926,49 +920,199 @@
                     transform: translateX(-50%);
                 }
             }
-            
-            @media (max-width: 768px) {
-                .container {
-                    flex-direction: column;
-                    text-align: center;
-                }
-                .hero-content h1 {
-                    font-size: 36px;
-                }
-                .cta-buttons {
-                    justify-content: center;
-                }
-                .stat-card {
-                    position: static;
-                    margin: 10px;
-                }
-            }
         </style>
 
         <div class="hero-section">
-            <div class="container container max-w-7xl  mx-auto px-6 lg:px-8">
+            <div class="container max-w-7xl  mx-auto px-6 lg:px-8 flex justify-between items-center">
                 <div class="hero-content">
                     <!-- <img src="/assets/images/hero_section/shape.png" alt="paper plane" class="paper-plane"> -->
-
-                    <h1>
-                        Learning is <span class="highlight">What You</span><br> Make of it. Make it Yours<br> at SkillGro.
-                    </h1>
-
-                    <div class="cta-buttons">
-                        <a href="#" class="btn-primary">
-            Start Free Trial →
-          </a>
-                        <a href="#" class="btn-demo">
-                            <span class="play-icon">▶</span>
-                            <span>Watch Our<br>Class Demo</span>
-                        </a>
+                    <!-- Main Heading -->
+                    <div class="space-y-1 mt-3">
+                        <h1 class="hero-title text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none">
+                            <span class="text-[var(--primary-color)]">Study Abroad</span> and
+                            <span class="text-[var(--accent-color)]" id="typingText">Education</span> Partner
+                        </h1>
                     </div>
-                </div>
 
-                <div class="hero-image">
+                    <style>
+                        #typingText {
+                            position: relative;
+                            display: inline-block;
+                            min-width: 150px;
+                        }
+                        
+                        #typingText::after {
+                            content: '|';
+                            animation: blink 0.7s infinite;
+                        }
+                        
+                        @keyframes blink {
+                            0%,
+                            50% {
+                                opacity: 1;
+                            }
+                            51%,
+                            100% {
+                                opacity: 0;
+                            }
+                        }
+                    </style>
+
+                    <script>
+                        const words = ['Education', 'Career', 'Immigration', 'Visa', 'Scholarship', 'University'];
+                        let wordIndex = 0;
+                        let charIndex = 0;
+                        let isDeleting = false;
+                        const typingElement = document.getElementById('typingText');
+                        const typingSpeed = 300;
+                        const deletingSpeed = 200;
+                        const pauseTime = 2000;
+
+                        function type() {
+                            const currentWord = words[wordIndex];
+
+                            if (isDeleting) {
+                                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                                charIndex--;
+                            } else {
+                                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                                charIndex++;
+                            }
+
+                            if (!isDeleting && charIndex === currentWord.length) {
+                                setTimeout(() => {
+                                    isDeleting = true;
+                                    type();
+                                }, pauseTime);
+                                return;
+                            }
+
+                            if (isDeleting && charIndex === 0) {
+                                isDeleting = false;
+                                wordIndex = (wordIndex + 1) % words.length;
+                            }
+
+                            const speed = isDeleting ? deletingSpeed : typingSpeed;
+                            setTimeout(type, speed);
+                        }
+
+                        setTimeout(type, 1000);
+                    </script>
+
+
+                    <!-- Description -->
+                    <p class="hero-desc text-gray-500 font-inter text-[18px] leading-none ">
+                        We help students secure admissions and student visas in top universitiesacross Australia, the UK, Canada, New Zeland & Europe with expert guidance and a transparent process
+                    </p>
+
+                    <!-- button -->
+                    <div class="flex items-center gap-8 mt-4">
+                        <a href="get-started.html" class="group flex items-center justify-between gap-4 pt-2 pb-2 pb-1 pl-4 pr-2 bg-[var(--primary-color)] border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300">
+                            <span class="text-gray-50 text-[16px] font-semibold group-hover:text-gray-50">
+                                Consultation
+                            </span>
+                            <div class="flex items-center justify-center w-8 h-8 bg-white rounded-full text-gray-600 transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </div>
+                        </a>
+
+                        <div class="relative flex items-center justify-center">
+                            <div onclick="openVideoModal()" class="relative cursor-pointer group">
+                                <div class="absolute inset-0 rounded-full bg-[var(--primary-color)] animate-ping opacity-40"></div>
+                                <div class="absolute inset-0 rounded-full bg-[var(--primary-color)] animate-pulse opacity-60 scale-110"></div>
+
+                                <div class="relative w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg z-10">
+                                    <div class="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-7xl mx-auto  py-12 w-[600px]">
+                        <div class="bg-white/80  border border-blue-100 rounded-4xl p-12 sm:p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+
+                                <div class="space-y-3">
+                                    <label class="flex items-center text-sm font-bold text-[var(--primary-color)] ml-1">
+                    <!-- <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h.293m0 0a2 2 0 011.414.586l1.586 1.586a2 2 0 001.414.586H19"></path>
+                    </svg> -->
+                    Select Country
+                </label>
+                                    <div class="relative group">
+                                        <select class="w-full appearance-none bg-blue-50/50 border-2 border-transparent group-hover:border-blue-200 focus:border-blue-500 focus:bg-white text-gray-700 py-3 px-5 pr-10 rounded-2xl transition-all duration-300 outline-none cursor-pointer">
+                        <option> Country</option>
+                        <option>USA</option>
+                        <option>United Kingdom</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                    </select>
+                                        <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <label class="flex items-center text-sm font-bold text-[var(--primary-color)] ml-1">
+                    <!-- <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-10V4m-5 10h.01M10 14h.01M10 18h.01M14 18h.01M14 14h.01M14 10h.01"></path>
+                    </svg> -->
+                    Select University
+                </label>
+                                    <div class="relative group">
+                                        <select class="w-full appearance-none bg-blue-50/50 border-2 border-transparent group-hover:border-blue-200 focus:border-blue-500 focus:bg-white text-gray-700 py-3 px-5 pr-10 rounded-2xl transition-all duration-300 outline-none cursor-pointer">
+                        <option> Institute</option>
+                        <option>Harvard University</option>
+                        <option>Oxford University</option>
+                        <option>MIT</option>
+                    </select>
+                                        <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <label class="flex items-center text-sm font-bold text-[var(--primary-color)] ml-1">
+                    <!-- <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg> -->
+                    Select Courses
+                </label>
+                                    <div class="flex gap-3">
+                                        <div class="relative group flex-grow">
+                                            <select class="w-full appearance-none bg-blue-50/50 border-2 border-transparent group-hover:border-blue-200 focus:border-blue-500 focus:bg-white text-gray-700 py-3 px-5 pr-10 rounded-2xl transition-all duration-300 outline-none cursor-pointer">
+                            <option>Field of Study</option>
+                            <option>Engineering</option>
+                            <option>Business</option>
+                            <option>Medicine</option>
+                        </select>
+                                            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
+                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </div>
+                                        </div>
+
+                                        <!-- <button class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-2xl shadow-sm shadow-blue-200 transition-all duration-300 hover:scale-105 active:scale-95 group">
+                        <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button> -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!--  right side-->
+                <div class="hero-image ml-20">
                     <img src="/assets/images/hero_section/SVG.png" alt="yellow blob" class="yellow-blob">
 
-                    <img src="/assets/images/hero_section/img.png" alt="Student" class="student-image ml-20">
+                    <img src="/assets/images/hero_section/img.png" alt="Student" class="student-image ml-24">
 
                     <div class="stat-card total-students ">
                         <img src="/assets/images/hero_section/Background+Border+Shadow (1).png" alt="Student" class="student-image w-[150px] mr-24">
@@ -998,12 +1142,15 @@
             </div>
         </div>
 
-        <div class="partner-banner">
+        <!-- <div class="partner-banner mx-auto px-6 lg:px-8 w-[100%]">
 
-            <img src="/assets/images/hero_section/Background.png">
+            <img src="/assets/images/hero_section/Background.png" class="">
 
-        </div>
+        </div> -->
     </section>
+
+
+
 
     <!-- star section -->
     <section class="py-12  lg:mt-10">
@@ -3398,3 +3545,4 @@ Get Started        </span>
 </html>/
 
 </html>
+<us2
