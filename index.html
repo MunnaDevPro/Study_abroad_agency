@@ -439,26 +439,6 @@
             background-color: #f3f4f6;
         }
         
-        .mobile-cta-button {
-            display: block;
-            margin: 1.5rem 1rem;
-            padding: 0.875rem 1.5rem;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 9999px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(30, 136, 229, 0.3);
-        }
-        
-        .mobile-cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(30, 136, 229, 0.4);
-        }
-        /* Hamburger Menu Icon Animation */
-        
         .hamburger-line {
             display: block;
             width: 25px;
@@ -609,14 +589,15 @@
                         <a href="contact.html" class="nav-link-custom">Contact</a>
                     </div>
                 </div>
+                <div class="hidden md:flex items-center flex-shrink-0">
+                    <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300">
 
-                <div class="hidden md:flex items-center flex-shrink-0 group">
-                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold">
-                        <span>Consultation</span>
-                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                            </svg>
+                        <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+            Consulation
+        </span>
+
+                        <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
                         </div>
                     </a>
                 </div>
@@ -740,317 +721,289 @@
 
 
     <!-- hero section -->
-    <style>
-        .dot-pattern {
-            background-image: radial-gradient(circle, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
-            background-size: 24px 24px;
-        }
-        /* .gradient-bg {
-            background: linear-gradient(135deg, hsl(240, 14%, 99%) 0%, #edeef4 50%, #ebebef 100%);
-        }
-         */
-        
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0px);
+    <section style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; overflow: hidden;">
+        <style>
+            .hero-section {
+                background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+                padding: 80px 20px 0;
+                position: relative;
+                min-height: 700px;
             }
-            50% {
-                transform: translateY(-15px);
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 50px;
             }
-        }
-        
-        .hero-image-fade {
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-        }
-    </style>
+            
+            .hero-content {
+                flex: 1;
+                max-width: 500px;
+            }
+            
+            .hero-content h1 {
+                font-size: 48px;
+                font-weight: 700;
+                color: #1a1a1a;
+                line-height: 1.2;
+                margin-bottom: 30px;
+            }
+            
+            .hero-content h1 .highlight {
+                background: #ffc107;
+                padding: 0 10px;
+                display: inline-block;
+            }
+            
+            .cta-buttons {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+            
+            .btn-primary {
+                background: #6366f1;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                transition: all 0.3s;
+            }
+            
+            .btn-primary:hover {
+                background: #4f46e5;
+                transform: translateY(-2px);
+            }
+            
+            .btn-demo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #1a1a1a;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s;
+            }
+            
+            .play-icon {
+                width: 50px;
+                height: 50px;
+                background: #ffc107;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+            }
+            
+            .hero-image {
+                flex: 1;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .paper-plane {
+                position: absolute;
+                left: -50px;
+                top: 20px;
+                opacity: 0.3;
+                width: 80px;
+                height: auto;
+            }
+            
+            .yellow-blob {
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                z-index: 1;
+            }
+            
+            .student-image {
+                position: relative;
+                z-index: 2;
+                max-width: 430px;
+                height: auto;
+            }
+            
+            .stat-card {
+                position: absolute;
+                padding: 15px 20px;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                z-index: 3;
+            }
+            
+            .stat-card.total-students {
+                top: 50px;
+                right: -20px;
+            }
+            
+            .stat-card.enrolled-students {
+                top: 150px;
+                left: -30px;
+            }
+            
+            .stat-icon {
+                width: 50px;
+                height: 50px;
+                background: #4caf50;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+            
+            .stat-info h3 {
+                font-size: 12px;
+                color: #666;
+                margin-bottom: 5px;
+            }
+            
+            .stat-info p {
+                font-size: 24px;
+                font-weight: 700;
+                color: #1a1a1a;
+            }
+            
+            .enrolled-avatars {
+                display: flex;
+                margin-left: 10px;
+            }
+            
+            .enrolled-avatars img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: 2px solid white;
+                margin-left: -5px;
+            }
+            
+            .partner-banner {
+                padding: 20px 0;
+                margin-top: -60px;
+                transform: rotate(-2deg);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .partner-strip {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                animation: scroll 20s linear infinite;
+                white-space: nowrap;
+            }
+            
+            .partner-strip img {
+                height: 30px;
+                width: auto;
+                filter: brightness(0) invert(1);
+                opacity: 0.9;
+            }
+            
+            .partner-strip span {
+                color: #ffc107;
+                font-size: 24px;
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .hero-content h1 {
+                    font-size: 36px;
+                }
+                .cta-buttons {
+                    justify-content: center;
+                }
+                .stat-card {
+                    position: static;
+                    margin: 10px;
+                }
+            }
+        </style>
 
-    <section class="relative overflow-hidden  dot-pattern">
-        <div class="container max-w-7xl  mx-auto px-6 lg:px-8  rounded-4xl mt-20">
-            <!-- <div class="container max-w-7xl  mx-auto px-6 lg:px-12  rounded-4xl mt-10"> -->
-            <div class="grid lg:grid-cols-2  items-center">
-                <!-- Left Content -->
-                <div data-aos="fade-right" data-aos-duration="700" class="mt-3 space-y-6 lg:space-y-8">
+        <div class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- <img src="/assets/images/hero_section/shape.png" alt="paper plane" class="paper-plane"> -->
 
+                    <h1>
+                        Learning is <span class="highlight">What You</span><br> Make of it. Make it Yours<br> at SkillGro.
+                    </h1>
 
-                    <!-- Main Heading -->
-                    <!-- Main Heading -->
-                    <div class="space-y-1">
-                        <h1 class="hero-title text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none">
-                            <span class="text-[var(--primary-color)]">Study Abroad</span> and
-                            <span class="text-[var(--accent-color)]" id="typingText">Education</span> Partner
-                        </h1>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn-primary">
+            Start Free Trial →
+          </a>
+                        <a href="#" class="btn-demo">
+                            <span class="play-icon">▶</span>
+                            <span>Watch Our<br>Class Demo</span>
+                        </a>
                     </div>
-
-                    <style>
-                        #typingText {
-                            position: relative;
-                            display: inline-block;
-                            min-width: 150px;
-                        }
-                        
-                        #typingText::after {
-                            content: '|';
-                            animation: blink 0.7s infinite;
-                        }
-                        
-                        @keyframes blink {
-                            0%,
-                            50% {
-                                opacity: 1;
-                            }
-                            51%,
-                            100% {
-                                opacity: 0;
-                            }
-                        }
-                    </style>
-
-                    <script>
-                        const words = ['Education', 'Career', 'Immigration', 'Visa', 'Scholarship', 'University'];
-                        let wordIndex = 0;
-                        let charIndex = 0;
-                        let isDeleting = false;
-                        const typingElement = document.getElementById('typingText');
-                        const typingSpeed = 300;
-                        const deletingSpeed = 200;
-                        const pauseTime = 2000;
-
-                        function type() {
-                            const currentWord = words[wordIndex];
-
-                            if (isDeleting) {
-                                typingElement.textContent = currentWord.substring(0, charIndex - 1);
-                                charIndex--;
-                            } else {
-                                typingElement.textContent = currentWord.substring(0, charIndex + 1);
-                                charIndex++;
-                            }
-
-                            if (!isDeleting && charIndex === currentWord.length) {
-                                setTimeout(() => {
-                                    isDeleting = true;
-                                    type();
-                                }, pauseTime);
-                                return;
-                            }
-
-                            if (isDeleting && charIndex === 0) {
-                                isDeleting = false;
-                                wordIndex = (wordIndex + 1) % words.length;
-                            }
-
-                            const speed = isDeleting ? deletingSpeed : typingSpeed;
-                            setTimeout(type, speed);
-                        }
-
-                        setTimeout(type, 1000);
-                    </script>
-
-                    <!-- Description -->
-                    <p class="hero-desc text-gray-500 font-inter text-[18px] leading-none ">
-                        We help students secure admissions and student visas in top universitiesacross Australia, the UK, Canada, New Zeland & Europe with expert guidance and a transparent process
-                    </p>
-                    <!-- button -->
-                    <div class="flex flex-wrap gap-4">
-                        <button type="submit" class="cursor-pointer group relative w-full sm:w-auto overflow-hidden bg-[var(--primary-color)] px-7 py-3 rounded-full font-semibold text-gray-100 transition-all duration-300 flex items-center justify-center gap-2">
-        <span class="relative z-10">Free Consultation</span>
-        <svg class="w-5 h-5 relative z-10 animate-slow-move" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-        </svg>
-        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-    </button>
-
-                        <style>
-                            /* Arrow Slow-motion animation */
-                            
-                            @keyframes slowMove {
-                                0%,
-                                100% {
-                                    transform: translateX(0);
-                                }
-                                50% {
-                                    transform: translateX(6px);
-                                }
-                            }
-                            
-                            .animate-slow-move {
-                                animation: slowMove 2s infinite ease-in-out;
-                            }
-                            
-                            .expericen-service {
-                                position: relative;
-                                z-index: 1;
-                                overflow: hidden;
-                                display: inline-flex;
-                                align-items: center;
-                                justify-content: center;
-                                transition: all 0.4s ease;
-                            }
-                            /* Nich theke utha blue layer */
-                            
-                            .expericen-service::before {
-                                content: "";
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 0;
-                                /* Shuru te height zero thakbe */
-                                background-color: var(--primary-color);
-                                /* Blue Color */
-                                transition: all 0.4s ease;
-                                z-index: -1;
-                            }
-                            
-                            .expericen-service:hover::before {
-                                height: 100%;
-                                /* Hover korle nich theke bhorat hoye upore uthbe */
-                            }
-                            
-                            .expericen-service:hover {
-                                color: white !important;
-                            }
-                        </style>
-                        <!-- <a href="#" class="px-8 py-4 bg-[var] text-white rounded-full font-semibold hover:bg-blue-900 transition">Free Consultation</a> -->
-                        <a href="#" class="expericen-service px-8 py-2 border-2 border-gray-200 text-gray-700 rounded-full font-semibold inline-block">
-    Explore Services
-</a> </div>
-
-                    <!-- rate -->
-                    <style>
-                        /* Hero Section Ripple Animation */
-                        
-                        .hero-ripple {
-                            position: relative;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            z-index: 10;
-                        }
-                        
-                        .hero-ripple::before,
-                        .hero-ripple::after {
-                            content: "";
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 50%;
-                            background-color: rgba(144, 167, 242, 0.3);
-                            z-index: -1;
-                            animation: hero-pulse 2.5s infinite ease-out;
-                        }
-                        /* Second ripple layer with delay */
-                        
-                        .hero-ripple::after {
-                            animation-delay: 1.2s;
-                        }
-                        
-                        @keyframes hero-pulse {
-                            0% {
-                                transform: scale(1);
-                                opacity: 0.8;
-                            }
-                            100% {
-                                transform: scale(1.5);
-                                opacity: 0;
-                            }
-                        }
-                        /* Card styling adjustment */
-                        
-                        .stat-card {
-                            background: white;
-                            transition: all 0.3s ease;
-                        }
-                    </style>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 lg:gap-4 mt-2">
-                        <div class=" stat-card flex flex-col items-center p-2 sm:p-4 rounded-2xl border border-blue-200 ">
-                            <div class="mb-4">
-                                <div class="hero-ripple text-blue-800 bg-blue-100 p-3 rounded-full">
-                                    <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                </svg>
-                                </div>
-                            </div>
-                            <h3 class="font-bold text-gray-700 text-lg mb-0"><span class="counter" data-target="99">0</span>%</h3>
-                            <p class="text-gray-500 text-[10px] uppercase tracking-wider font-semibold">Acceptance Rate</p>
-                        </div>
-
-                        <div class="stat-card flex flex-col items-center p-2 sm:p-4 rounded-2xl border border-gray-200">
-                            <div class="mb-4">
-                                <div class="hero-ripple text-blue-800 bg-blue-100 p-3 rounded-full">
-                                    <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
-                </svg>
-                                </div>
-                            </div>
-                            <h3 class="font-bold text-gray-800 text-lg mb-0"><span class="counter" data-target="200">0</span>+</h3>
-                            <p class="text-gray-500 text-[10px] uppercase tracking-wider font-semibold">Global Partners</p>
-                        </div>
-
-                        <div class="stat-card flex flex-col items-center p-2 sm:p-4 rounded-2xl border border-gray-200">
-                            <div class="mb-4">
-                                <div class="hero-ripple text-blue-800 bg-blue-100 p-3 rounded-full">
-                                    <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-                                </div>
-                            </div>
-                            <h3 class="font-bold text-gray-800 text-lg mb-0"><span class="counter" data-target="15">0</span>+</h3>
-                            <p class="text-gray-500 text-[10px] uppercase tracking-wider font-semibold">Excellence Awards</p>
-                        </div>
-
-
-                        <script>
-                            // Counter Animation Logic
-                            const counters = document.querySelectorAll('.counter');
-                            const speed = 200;
-
-                            const startCounters = () => {
-                                counters.forEach(counter => {
-                                    const updateCount = () => {
-                                        const target = +counter.getAttribute('data-target');
-                                        const count = +counter.innerText;
-                                        const inc = target / speed;
-
-                                        if (count < target) {
-                                            counter.innerText = Math.ceil(count + inc);
-                                            setTimeout(updateCount, 15);
-                                        } else {
-                                            counter.innerText = target;
-                                        }
-                                    };
-                                    updateCount();
-                                });
-                            }
-
-                            // Trigger when page loads
-                            window.addEventListener('DOMContentLoaded', startCounters);
-                        </script>
-                    </div>
-
-
-
                 </div>
 
-                <!-- Right Content - Image Section -->
-                <div data-aos="fade-left" data-aos-duration="700" class="relative h-[400px] lg:h-[450px] flex items-end justify-center lg:mt-16">
+                <div class="hero-image">
+                    <img src="/assets/images/hero_section/SVG.png" alt="yellow blob" class="yellow-blob">
 
-                    <!-- Person Image -->
-                    <div class="relative z-10 hero-image-fade lg:ml-20">
-                        <img src="/assets/images/student-bg-11.png" alt="Support Professional " class=" h-80 md:h-[430px] lg:h-[480px] object-cover object-top shadow-sm " loading="lazy " />
+                    <img src="/assets/images/hero_section/img.png" alt="Student" class="student-image ml-20">
+
+                    <div class="stat-card total-students ">
+                        <img src="/assets/images/hero_section/Background+Border+Shadow (1).png" alt="Student" class="student-image w-[150px] mr-24">
+
+                        <!-- <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>Total Students</h3>
+                            <p>15K</p>
+                        </div> -->
                     </div>
 
+                    <div class="stat-card enrolled-students">
+                        <img src="/assets/images/hero_section/Background+Border+Shadow.png" class="w-[150px] ml-16">
+                        <!-- <div class="stat-info">
+                            <h3><strong>36K+</strong> Enrolled Students</h3>
+                            <div class="enrolled-avatars">
+
+                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%23e91e63'/%3E%3C/svg%3E" alt="student">
+                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%23ffc107'/%3E%3C/svg%3E" alt="student">
+                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%239c27b0'/%3E%3C/svg%3E" alt="student">
+                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%234caf50'/%3E%3C/svg%3E" alt="student">
+                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%232196f3'/%3E%3C/svg%3E" alt="student">
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
+        <div class="partner-banner">
+
+            <img src="/assets/images/hero_section/Background.png">
+
+        </div>
+    </section>
 
     <!-- star section -->
     <section class="py-12  lg:mt-10">
@@ -2744,9 +2697,15 @@
                     <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Contact Us</span>
                     <h3 class="text-xl font-semibold mb-1">Book Free Consultation</h3>
                     <p class="text-gray-500 mb-6 italic">Talk to an Expert Counselor</p>
-                    <button class="bg-[var(--primary-color)] text-white px-8 py-3 text-sm font-bold uppercase hover:bg-[var(--primary-color)] rounded-4xl transition-colors">
-                    Get Started
-                </button>
+                    <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300">
+
+                        <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+Get Started        </span>
+
+                        <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -2809,12 +2768,14 @@
                         <span class="text-[var(--primary-color)]">Latest </span>Updates Blogs
                     </h2>
                 </div>
-                <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold">
-                    <span>View All Article</span>
-                    <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                        <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                        </svg>
+                <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300">
+
+                    <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+            View All Article
+        </span>
+
+                    <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
                     </div>
                 </a>
             </div>
@@ -2856,12 +2817,14 @@
                                 </div>
 
                                 <div class="bottom-content mt-6 md:mt-0">
-                                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold w-fit">
-                                        <span>View Article</span>
-                                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                        </svg>
+                                    <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300 w-fit">
+
+                                        <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+            View Article
+        </span>
+
+                                        <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                                            <i class="fa-solid fa-arrow-right text-xs"></i>
                                         </div>
                                     </a>
 
@@ -2904,12 +2867,14 @@
                                 </div>
 
                                 <div class="bottom-content mt-6 md:mt-0">
-                                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold w-fit">
-                                        <span>View Article</span>
-                                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                        </svg>
+                                    <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300 w-fit">
+
+                                        <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+            View Article
+        </span>
+
+                                        <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                                            <i class="fa-solid fa-arrow-right text-xs"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -2952,12 +2917,14 @@
                                 </div>
 
                                 <div class="bottom-content mt-6 md:mt-0">
-                                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold w-fit">
-                                        <span>View Article</span>
-                                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                        </svg>
+                                    <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300 w-fit">
+
+                                        <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+            View Article
+        </span>
+
+                                        <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                                            <i class="fa-solid fa-arrow-right text-xs"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -3000,12 +2967,14 @@
                                 </div>
 
                                 <div class="bottom-content mt-6 md:mt-0">
-                                    <a href="get-started.html" class="cta-button flex items-center gap-2.5 px-4 py-2 rounded-full font-semibold w-fit">
-                                        <span>View Article</span>
-                                        <div class="icon-wrapper flex items-center justify-center w-6 h-6 rounded-full group-hover:text-white">
-                                            <svg class="group-hover:text-gray-100 w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--primary-color);">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                        </svg>
+                                    <a href="get-started.html" class="group flex items-center justify-between gap-4 pl-4 pr-2 py-1 bg-white border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300 w-fit">
+
+                                        <span class="text-gray-600 text-[16px] font-semibold group-hover:text-gray-50">
+            View Article
+        </span>
+
+                                        <div class="flex items-center justify-center w-8 h-8 bg-[var(--primary-color)] rounded-full text-white transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
+                                            <i class="fa-solid fa-arrow-right text-xs"></i>
                                         </div>
                                     </a>
                                 </div>
@@ -3425,5 +3394,7 @@
         AOS.init();
     </script>
 </body>
+
+</html>/
 
 </html>
