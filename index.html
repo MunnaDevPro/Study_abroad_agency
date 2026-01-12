@@ -716,7 +716,7 @@
     </script>
 
 
-    <!-- navbar -->
+    <!-- hero section -->
     <!-- hero section -->
     <section style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; overflow: hidden;">
         <style>
@@ -726,14 +726,6 @@
                 position: relative;
                 min-height: 600px;
             }
-            /* .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 50px;
-            } */
             
             .hero-content {
                 flex: 1;
@@ -920,17 +912,115 @@
                     transform: translateX(-50%);
                 }
             }
+            /* Responsive Styles */
+            
+            @media (max-width: 1024px) {
+                .hero-content h1 {
+                    font-size: 36px;
+                }
+                .yellow-blob {
+                    width: 300px;
+                    height: 300px;
+                }
+                .student-image {
+                    max-width: 350px;
+                }
+                .stat-card.total-students {
+                    top: 30px;
+                    right: -10px;
+                }
+                .stat-card.enrolled-students {
+                    top: 120px;
+                    left: -20px;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .hero-section {
+                    padding: 40px 20px 0;
+                    min-height: auto;
+                }
+                .hero-content {
+                    max-width: 100%;
+                    text-align: center;
+                }
+                .hero-content h1 {
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+                .cta-buttons {
+                    flex-direction: column;
+                    gap: 15px;
+                    justify-content: center;
+                }
+                .btn-primary {
+                    width: 100%;
+                    justify-content: center;
+                }
+                .btn-demo {
+                    width: 100%;
+                    justify-content: center;
+                }
+                .hero-image {
+                    margin-top: 40px;
+                    margin-left: 0 !important;
+                }
+                .yellow-blob {
+                    width: 250px;
+                    height: 250px;
+                }
+                .student-image {
+                    max-width: 280px;
+                    margin-left: 0 !important;
+                }
+                .stat-card {
+                    position: static;
+                    margin: 10px auto;
+                    justify-content: center;
+                }
+                .stat-card img {
+                    width: 120px !important;
+                    margin: 0 !important;
+                }
+                .partner-banner {
+                    margin-top: 40px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .hero-content h1 {
+                    font-size: 24px;
+                }
+                .btn-primary {
+                    padding: 12px 24px;
+                    font-size: 14px;
+                }
+                .play-icon {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                }
+                .yellow-blob {
+                    width: 200px;
+                    height: 200px;
+                }
+                .student-image {
+                    max-width: 220px;
+                }
+                .stat-card img {
+                    width: 100px !important;
+                }
+            }
         </style>
 
         <div class="hero-section">
-            <div class="container max-w-7xl  mx-auto px-6 lg:px-8 flex justify-between items-center">
+            <div class="container max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center">
                 <div class="hero-content">
-                    <!-- <img src="/assets/images/hero_section/shape.png" alt="paper plane" class="paper-plane"> -->
                     <!-- Main Heading -->
                     <div class="space-y-1 mt-3">
                         <h1 class="hero-title text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-700 leading-none">
-                            <span class="text-[var(--primary-color)]">Study Abroad</span> and
-                            <span class="text-[var(--accent-color)]" id="typingText">Education</span> Partner
+                            <span style="color: var(--primary-color)">Study Abroad</span> and
+                            <span style="color: var(--accent-color)" id="typingText">Education</span> Partner
                         </h1>
                     </div>
 
@@ -999,18 +1089,17 @@
                         setTimeout(type, 1000);
                     </script>
 
-
                     <!-- Description -->
-                    <p class="hero-desc text-gray-500 font-inter text-[18px] leading-none ">
-                        We help students secure admissions and student visas in top universitiesacross Australia, the UK, Canada, New Zeland & Europe with expert guidance and a transparent process
+                    <p class="hero-desc text-gray-500 font-inter text-[18px] leading-none mt-4">
+                        We help students secure admissions and student visas in top universities across Australia, the UK, Canada, New Zealand & Europe with expert guidance and a transparent process
                     </p>
 
                     <!-- button -->
-                    <div class="flex items-center gap-8 mt-4">
-                        <a href="get-started.html" class="group flex items-center justify-between gap-4 pt-2 pb-2 pb-1 pl-4 pr-2 bg-[var(--primary-color)] border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300">
+                    <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 mt-4">
+                        <a href="get-started.html" class="group flex items-center justify-between gap-4 pt-2 pb-2 pl-4 pr-2 bg-[var(--primary-color)] border border-gray-200 rounded-full hover:bg-[var(--primary-color)] transition-all duration-300 w-full sm:w-auto">
                             <span class="text-gray-50 text-[16px] font-semibold group-hover:text-gray-50">
-                                Consultation
-                            </span>
+                            Consultation
+                        </span>
                             <div class="flex items-center justify-center w-8 h-8 bg-white rounded-full text-gray-600 transition-transform duration-300 group-hover:bg-gray-50 group-hover:text-gray-600">
                                 <i class="fa-solid fa-arrow-right text-xs"></i>
                             </div>
@@ -1028,25 +1117,23 @@
                         </div>
                     </div>
 
-                    <div class="max-w-7xl mx-auto  py-12 w-[600px]">
-                        <div class="bg-white/80  border border-blue-100 rounded-4xl p-12 sm:p-6">
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                    <!-- Search Form -->
+                    <div class="max-w-7xl mx-auto py-8 lg:py-12 w-full lg:w-[600px]">
+                        <div class="bg-white/80 border border-blue-100 rounded-4xl p-4 sm:p-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-end">
 
                                 <div class="space-y-3">
                                     <label class="flex items-center text-sm font-bold text-[var(--primary-color)] ml-1">
-                    <!-- <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h.293m0 0a2 2 0 011.414.586l1.586 1.586a2 2 0 001.414.586H19"></path>
-                    </svg> -->
-                    Select Country
-                </label>
+                                    Select Country
+                                </label>
                                     <div class="relative group">
                                         <select class="w-full appearance-none bg-blue-50/50 border-2 border-transparent group-hover:border-blue-200 focus:border-blue-500 focus:bg-white text-gray-700 py-3 px-5 pr-10 rounded-2xl transition-all duration-300 outline-none cursor-pointer">
-                        <option> Country</option>
-                        <option>USA</option>
-                        <option>United Kingdom</option>
-                        <option>Canada</option>
-                        <option>Australia</option>
-                    </select>
+                                        <option>Country</option>
+                                        <option>USA</option>
+                                        <option>United Kingdom</option>
+                                        <option>Canada</option>
+                                        <option>Australia</option>
+                                    </select>
                                         <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                         </div>
@@ -1055,18 +1142,15 @@
 
                                 <div class="space-y-3">
                                     <label class="flex items-center text-sm font-bold text-[var(--primary-color)] ml-1">
-                    <!-- <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-10V4m-5 10h.01M10 14h.01M10 18h.01M14 18h.01M14 14h.01M14 10h.01"></path>
-                    </svg> -->
-                    Select University
-                </label>
+                                    Select University
+                                </label>
                                     <div class="relative group">
                                         <select class="w-full appearance-none bg-blue-50/50 border-2 border-transparent group-hover:border-blue-200 focus:border-blue-500 focus:bg-white text-gray-700 py-3 px-5 pr-10 rounded-2xl transition-all duration-300 outline-none cursor-pointer">
-                        <option> Institute</option>
-                        <option>Harvard University</option>
-                        <option>Oxford University</option>
-                        <option>MIT</option>
-                    </select>
+                                        <option>Institute</option>
+                                        <option>Harvard University</option>
+                                        <option>Oxford University</option>
+                                        <option>MIT</option>
+                                    </select>
                                         <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                         </div>
@@ -1075,29 +1159,20 @@
 
                                 <div class="space-y-3">
                                     <label class="flex items-center text-sm font-bold text-[var(--primary-color)] ml-1">
-                    <!-- <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                    </svg> -->
-                    Select Courses
-                </label>
+                                    Select Courses
+                                </label>
                                     <div class="flex gap-3">
                                         <div class="relative group flex-grow">
                                             <select class="w-full appearance-none bg-blue-50/50 border-2 border-transparent group-hover:border-blue-200 focus:border-blue-500 focus:bg-white text-gray-700 py-3 px-5 pr-10 rounded-2xl transition-all duration-300 outline-none cursor-pointer">
-                            <option>Field of Study</option>
-                            <option>Engineering</option>
-                            <option>Business</option>
-                            <option>Medicine</option>
-                        </select>
+                                            <option>Field of Study</option>
+                                            <option>Engineering</option>
+                                            <option>Business</option>
+                                            <option>Medicine</option>
+                                        </select>
                                             <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-blue-400">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                             </div>
                                         </div>
-
-                                        <!-- <button class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-2xl shadow-sm shadow-blue-200 transition-all duration-300 hover:scale-105 active:scale-95 group">
-                        <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button> -->
                                     </div>
                                 </div>
 
@@ -1105,48 +1180,25 @@
                         </div>
                     </div>
 
-
-
                 </div>
-                <!--  right side-->
-                <div class="hero-image ml-20">
+
+                <!-- Right side - Hero Image -->
+                <div class="hero-image ml-0 lg:ml-20 mt-8 lg:mt-0">
                     <img src="/assets/images/hero_section/SVG.png" alt="yellow blob" class="yellow-blob">
 
-                    <img src="/assets/images/hero_section/img.png" alt="Student" class="student-image ml-24">
+                    <img src="/assets/images/hero_section/img.png" alt="Student" class="student-image ml-0 lg:ml-24">
 
-                    <div class="stat-card total-students ">
-                        <img src="/assets/images/hero_section/Background+Border+Shadow (1).png" alt="Student" class="student-image w-[150px] mr-24">
-
-                        <!-- <div class="stat-icon">👥</div>
-                        <div class="stat-info">
-                            <h3>Total Students</h3>
-                            <p>15K</p>
-                        </div> -->
+                    <div class="stat-card total-students">
+                        <img src="/assets/images/hero_section/Background+Border+Shadow (1).png" alt="Total Students" class="w-[150px] mr-0 lg:mr-24">
                     </div>
 
                     <div class="stat-card enrolled-students">
-                        <img src="/assets/images/hero_section/Background+Border+Shadow.png" class="w-[150px] ml-16">
-                        <!-- <div class="stat-info">
-                            <h3><strong>36K+</strong> Enrolled Students</h3>
-                            <div class="enrolled-avatars">
-
-                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%23e91e63'/%3E%3C/svg%3E" alt="student">
-                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%23ffc107'/%3E%3C/svg%3E" alt="student">
-                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%239c27b0'/%3E%3C/svg%3E" alt="student">
-                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%234caf50'/%3E%3C/svg%3E" alt="student">
-                                <img src="data:image/svg+xml,%3Csvg width='35' height='35' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17.5' fill='%232196f3'/%3E%3C/svg%3E" alt="student">
-                            </div>
-                        </div> -->
+                        <img src="/assets/images/hero_section/Background+Border+Shadow.png" alt="Enrolled Students" class="w-[150px] ml-0 lg:ml-16">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="partner-banner mx-auto px-6 lg:px-8 w-[100%]">
-
-            <img src="/assets/images/hero_section/Background.png" class="">
-
-        </div> -->
     </section>
 
 
