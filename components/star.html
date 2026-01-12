@@ -1,0 +1,224 @@
+<!-- star section -->
+<section class="py-16 bg-gray-50">
+    <style>
+         :root {
+            --primary-brand: #2563eb;
+            --accent-brand: #7c3aed;
+        }
+        
+        .metric-card {
+            position: relative;
+            overflow: hidden;
+            background: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f5f9;
+        }
+        /* টপ বর্ডার এনিমেশন */
+        
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-brand), var(--accent-brand));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .metric-card:hover::before {
+            transform: scaleX(1);
+        }
+        /* হালকা শ্যাডো ইফেক্ট */
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        /* আইকন এখন স্টিল থাকবে, শুধু হালকা জুম হবে */
+        
+        .brand-icon-box {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover .brand-icon-box {
+            transform: scale(1.05);
+            /* হালকা জুম, কোনো রোটেশন নেই */
+        }
+        
+        .brand-icon-bg {
+            position: absolute;
+            inset: 0;
+            background: currentColor;
+            opacity: 0.1;
+            border-radius: 12px;
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover .brand-icon-bg {
+            opacity: 0.15;
+            transform: scale(1.4);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-brand), var(--accent-brand));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-1.5 mb-4 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-wider">
+                Our Achievement
+            </span>
+            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-4">
+                <span class="text-blue-600">Study Abroad</span> Successfully
+            </h2>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+                Empowering students worldwide to achieve their academic dreams
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+            <div class="metric-card rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
+                <div class="brand-icon-box relative p-4 mb-5 rounded-xl bg-blue-600 text-white">
+                    <div class="brand-icon-bg text-blue-600"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l10 5L12 19 2 7l10-5zM2 7l10 5m0 0l10-5m-10 5v12" />
+                    </svg>
+                </div>
+                <span class="gradient-text text-4xl font-black mb-1" data-counter="student-helped">1.5M+</span>
+                <p class="text-gray-500 text-sm font-semibold uppercase tracking-tight">Students Helped</p>
+            </div>
+
+            <div class="metric-card rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
+                <div class="brand-icon-box relative p-4 mb-5 rounded-xl bg-blue-600 text-white">
+                    <div class="brand-icon-bg bg-blue-600"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                </div>
+                <span class="gradient-text text-4xl font-black mb-1" data-counter="global-program">150K+</span>
+                <p class="text-gray-500 text-sm font-semibold uppercase tracking-tight">Global Programs</p>
+            </div>
+
+            <div class="metric-card rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
+                <div class="brand-icon-box relative p-4 mb-5 rounded-xl bg-[var(--primary-color)] text-white">
+                    <div class="brand-icon-bg text-emerald-600"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M3 22h18M3 10l9-7 9 7M9 22V12h6v10" />
+                    </svg>
+                </div>
+                <span class="gradient-text text-4xl font-black mb-1" data-counter="institution-global">2,500+</span>
+                <p class="text-gray-500 text-sm font-semibold uppercase tracking-tight">Institutions</p>
+            </div>
+
+            <div class="metric-card rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
+                <div class="brand-icon-box relative p-4 mb-5 rounded-xl bg-[var(--primary-color)] text-white">
+                    <div class="brand-icon-bg text-orange-500"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7" />
+                    </svg>
+                </div>
+                <span class="gradient-text text-4xl font-black mb-1" data-counter="nationalities">120+</span>
+                <p class="text-gray-500 text-sm font-semibold uppercase tracking-tight">Nationalities</p>
+            </div>
+
+            <div class="metric-card rounded-2xl p-8 flex flex-col items-center text-center shadow-sm">
+                <div class="brand-icon-box relative p-4 mb-5 rounded-xl bg-rose-500 text-white">
+                    <div class="brand-icon-bg text-rose-500"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="7" r="4" />
+                        <path d="M3.28 21.32A10 10 0 0 1 12 17c2.81 0 5.37 1.05 7.72 4.32" />
+                    </svg>
+                </div>
+                <span class="gradient-text text-4xl font-black mb-1" data-counter="experience">15+</span>
+                <p class="text-gray-500 text-sm font-semibold uppercase tracking-tight">Years Exp.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    // Manual Data - Apni ekhane icche moto number boshiye din
+    const manualData = {
+        studentHelped: "1.5M", // Million bujhate 'M' use korun
+        globalProgram: "150000", // Total numbers
+        institutionGlobal: "2500",
+        nationalities: "120",
+        experience: "15"
+    };
+
+    function parseValue(value, isMillions = false) {
+        const cleaned = value.toString().replace(/[^0-9.]/g, '');
+        const parsed = parseFloat(cleaned) || 0;
+
+        if (isMillions || value.toString().toUpperCase().includes('M')) {
+            return parsed * 1000000;
+        }
+        if (value.toString().toUpperCase().includes('K')) {
+            return parsed * 1000;
+        }
+        return parsed;
+    }
+
+    const targetValues = {
+        'student-helped': parseValue(manualData.studentHelped),
+        'global-program': parseValue(manualData.globalProgram),
+        'institution-global': parseValue(manualData.institutionGlobal),
+        'nationalities': parseValue(manualData.nationalities),
+        'experience': parseValue(manualData.experience)
+    };
+
+    function formatNumber(value, key) {
+        const target = targetValues[key];
+        if (key === 'student-helped') {
+            let millionValue = (value / 1000000).toFixed(1);
+            return millionValue + 'M+';
+        } else if (key === 'global-program' || key === 'institution-global') {
+            return Math.floor(value).toLocaleString('en-US') + '+';
+        } else {
+            return Math.floor(value) + '+';
+        }
+    }
+
+    function countUp(element, target, key) {
+        const duration = 2000;
+        let start = 0;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            if (elapsedTime < duration) {
+                start = (elapsedTime / duration) * target;
+                element.textContent = formatNumber(start, key);
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = formatNumber(target, key);
+            }
+        }
+        requestAnimationFrame(update);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counterElement = entry.target;
+                const key = counterElement.getAttribute('data-counter');
+                countUp(counterElement, targetValues[key], key);
+                observer.unobserve(counterElement);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('[data-counter]').forEach(el => observer.observe(el));
+</script>
